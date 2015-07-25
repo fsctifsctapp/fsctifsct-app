@@ -1,0 +1,19 @@
+
+
+***********************************************************************
+Fatal NI connect error 12543, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.99.204)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=gcoop)(CID=(PROGRAM=C:\OracleXE-Importer\OraImp.exe)(HOST=TP)(USER=9LordOfArt))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.3.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.3.0 - Production
+  Time: 16-ก.ย. -2010 11:15:04
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12543
+    TNS-12543: TNS: ติดต่อโฮสต์ปลายทางไม่ได้
+    ns secondary err code: 12560
+    nt main err code: 513
+    TNS-00513: ไม่สามารถเข้าถึงโฮสต์ปลายทาง
+    nt secondary err code: 51
+    nt OS err code: 0

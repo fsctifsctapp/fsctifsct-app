@@ -1,0 +1,1151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{790AF9CF-F240-409D-8279-6A65C53D1E5B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Saving</RootNamespace>
+    <AssemblyName>Saving</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Saving.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adminservice, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libadmin\adminservice.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindow, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonLibrary\otherlib\DataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindowInterop, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonLibrary\otherlib\DataWindowInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="DTG.Spreadsheet, Version=2.5.0.0, Culture=neutral, PublicKeyToken=7b835b529fb706c3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonLibrary\otherlib\DTG.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebDataWindow, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommonLibrary\otherlib\WebDataWindow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Applications\walfare\w_sheet_wc_wc_fee_slipprint.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_cri_total_age.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_edit_deptacc.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_cri_feeyear.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_inform_new_admin.aspx" />
+    <Content Include="Applications\walfare\w_sheer_wc_trn_member_status.aspx" />
+    <Content Include="Applications\walfare\w_sheet_criteria_recievefixedyear.aspx" />
+    <Content Include="Applications\walfare\w_sheet_ex_memberdetail.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_add_feeyear.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_cri_memo.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_cri_mem_c_branchall.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_cri_pay_dia.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_cri_rdocno_admin.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_edit_bank.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_export_excel_fee.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_group_wait_paid.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_criteria_search_for_member.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_criteria_sumary_all.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_export_excel_recieve_fixed.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_criteria_section_cstype.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_branch_info.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_deptedit.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_inform_new.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_inform_old.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_printslip.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_printslip_frommaster.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_receive.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_trn_member.aspx" />
+    <Content Include="Applications\walfare\dlg\w_dlg_wc_walfare_reqedit.aspx" />
+    <Content Include="Applications\walfare\uc_w_sheet_requestnew_light\UcMain.ascx" />
+    <Content Include="Applications\walfare\uc_w_sheet_requestnew_light\UcOther.ascx" />
+    <Content Include="Applications\walfare\uc_w_sheet_requestnew_light\UcSlip.ascx" />
+    <Content Include="Applications\walfare\w_sheet_checkduplicate.aspx" />
+    <Content Include="Applications\walfare\w_sheet_checkduplicate_not_card_ps.aspx" />
+    <Content Include="Applications\walfare\w_sheet_checkduplicate_not_mb_no.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_approve_reqwalfare.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_cancel_approve_paid.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_create_branch.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_create_username.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_criteria_bank_cstype.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_deptedit.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_expexcel_membcard.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_export_excel.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_find_req.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_fine_person.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_group_paid.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_group_paid_cancel.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_inform.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_inform_adminn.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_ma_programer.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_memo_admin.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_memo_cancal.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_paid_add.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_pay_die.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_permission_all.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_proc_Age.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_requestnew_light.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_revive.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_save_die_month.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_trn_member.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_trn_member_branch.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_trn_member_confirm.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_ucf_round_for_pay.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_ucf_round_regisfixed.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_walfare_new.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_walfare_paid.aspx" />
+    <Content Include="Applications\walfare\w_sheet_wc_walfare_reqedit.aspx" />
+    <Content Include="Criteria\u_cri_wc_feeyear.aspx" />
+    <Content Include="Criteria\u_cri_raccno.aspx" />
+    <Content Include="Criteria\u_cri_rdate_rmembno_slip.aspx" />
+    <Content Include="Criteria\u_cri_rdate_rmembno_slip_paid.aspx" />
+    <Content Include="Criteria\u_cri_rdate_rmembno_slip_reg.aspx" />
+    <Content Include="Criteria\u_cri_rdocno_branchid.aspx" />
+    <Content Include="Criteria\u_cri_rdocno_branchid_58.aspx" />
+    <Content Include="Criteria\u_cri_rdocno_branchid_membtype.aspx" />
+    <Content Include="Criteria\u_cri_rdocno_branchid_paid_later.aspx" />
+    <Content Include="Criteria\u_cri_rdocno_montly.aspx" />
+    <Content Include="Criteria\u_cri_wc_dia_pay.aspx" />
+    <Content Include="Criteria\u_cri_wc_paybook.aspx" />
+    <Content Include="Criteria\u_cri_wc_recievefixedyear.aspx" />
+    <Content Include="Criteria\u_cri_wc_recievefixedyear_frombranch.aspx" />
+    <Content Include="Criteria\u_cri_wc_statement_year.aspx" />
+    <Content Include="Criteria\u_cri_wc_summary_all.aspx" />
+    <Content Include="Criteria\u_cri_wc_transfer.aspx" />
+    <Content Include="Criteria\u_cri_wc_transfer_all.aspx" />
+    <Content Include="CustomControl\membercheck.ascx" />
+    <Content Include="CustomControl\MenuSubControl.ascx" />
+    <Content Include="Flash\Config.xml" />
+    <Content Include="Flash\Ghome.swf" />
+    <Content Include="Flash\Ghome.xml" />
+    <None Include="DataWindow\Criteria\criteria.pbl" />
+    <None Include="DataWindow\walfare\w_sheet_duplicate.pbl" />
+    <None Include="DataWindow\walfare\w_sheet_wc_export_excel.pbl" />
+    <None Include="DataWindow\walfare\w_sheet_wc_inform.pbl" />
+    <None Include="DataWindow\walfare\w_sheet_wc_membermaster.pbl" />
+    <None Include="DataWindow\walfare\w_sheet_wc_permission_all.pbl" />
+    <None Include="DataWindow\walfare\w_sheet_wc_trn_memb.pbl" />
+    <None Include="DataWindow\walfare\w_sheet_wc_walfare_new.pbl" />
+    <Content Include="img\applications\1.png" />
+    <Content Include="img\applications\2.png" />
+    <Content Include="img\applications\3.png" />
+    <Content Include="img\applications\4.png" />
+    <Content Include="img\applications\5.png" />
+    <Content Include="img\applications\6.png" />
+    <Content Include="img\applications\7.png" />
+    <Content Include="img\applications\8.png" />
+    <Content Include="img\applications\walfare.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Applications\walfare\w_sheet_wc_wc_fee_slipprint.aspx.cs">
+      <DependentUpon>w_sheet_wc_wc_fee_slipprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_wc_fee_slipprint.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_wc_fee_slipprint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_total_age.aspx.cs">
+      <DependentUpon>w_sheet_wc_cri_total_age.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_total_age.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_cri_total_age.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_edit_deptacc.aspx.cs">
+      <DependentUpon>w_sheet_wc_edit_deptacc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_edit_deptacc.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_edit_deptacc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_feeyear.aspx.cs">
+      <DependentUpon>w_sheet_wc_cri_feeyear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_feeyear.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_cri_feeyear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_inform_new_admin.aspx.cs">
+      <DependentUpon>w_dlg_wc_inform_new_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_inform_new_admin.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_inform_new_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheer_wc_trn_member_status.aspx.cs">
+      <DependentUpon>w_sheer_wc_trn_member_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheer_wc_trn_member_status.aspx.designer.cs">
+      <DependentUpon>w_sheer_wc_trn_member_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_criteria_recievefixedyear.aspx.cs">
+      <DependentUpon>w_sheet_criteria_recievefixedyear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_criteria_recievefixedyear.aspx.designer.cs">
+      <DependentUpon>w_sheet_criteria_recievefixedyear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_ex_memberdetail.aspx.cs">
+      <DependentUpon>w_sheet_ex_memberdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_ex_memberdetail.aspx.designer.cs">
+      <DependentUpon>w_sheet_ex_memberdetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_add_feeyear.aspx.cs">
+      <DependentUpon>w_sheet_wc_add_feeyear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_add_feeyear.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_add_feeyear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_memo.aspx.cs">
+      <DependentUpon>w_sheet_wc_cri_memo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_memo.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_cri_memo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_mem_c_branchall.aspx.cs">
+      <DependentUpon>w_sheet_wc_cri_mem_c_branchall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_mem_c_branchall.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_cri_mem_c_branchall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_pay_dia.aspx.cs">
+      <DependentUpon>w_sheet_wc_cri_pay_dia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_pay_dia.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_cri_pay_dia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_rdocno_admin.aspx.cs">
+      <DependentUpon>w_sheet_wc_cri_rdocno_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cri_rdocno_admin.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_cri_rdocno_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_edit_bank.aspx.cs">
+      <DependentUpon>w_sheet_wc_edit_bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_edit_bank.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_edit_bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_export_excel_fee.aspx.cs">
+      <DependentUpon>w_sheet_wc_export_excel_fee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_export_excel_fee.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_export_excel_fee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_group_wait_paid.aspx.cs">
+      <DependentUpon>w_sheet_wc_group_wait_paid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_group_wait_paid.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_group_wait_paid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_criteria_search_for_member.aspx.cs">
+      <DependentUpon>w_sheet_wc_criteria_search_for_member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_criteria_search_for_member.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_criteria_search_for_member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_criteria_sumary_all.aspx.cs">
+      <DependentUpon>w_sheet_wc_criteria_sumary_all.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_criteria_sumary_all.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_criteria_sumary_all.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_export_excel_recieve_fixed.aspx.cs">
+      <DependentUpon>w_sheet_wc_export_excel_recieve_fixed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_export_excel_recieve_fixed.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_export_excel_recieve_fixed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_criteria_section_cstype.aspx.cs">
+      <DependentUpon>w_sheet_wc_criteria_section_cstype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_criteria_section_cstype.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_criteria_section_cstype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_branch_info.aspx.cs">
+      <DependentUpon>w_dlg_wc_branch_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_branch_info.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_branch_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_deptedit.aspx.cs">
+      <DependentUpon>w_dlg_wc_deptedit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_deptedit.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_deptedit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_inform_new.aspx.cs">
+      <DependentUpon>w_dlg_wc_inform_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_inform_new.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_inform_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_inform_old.aspx.cs">
+      <DependentUpon>w_dlg_wc_inform_old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_inform_old.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_inform_old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_printslip.aspx.cs">
+      <DependentUpon>w_dlg_wc_printslip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_printslip.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_printslip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_printslip_frommaster.aspx.cs">
+      <DependentUpon>w_dlg_wc_printslip_frommaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_printslip_frommaster.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_printslip_frommaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_receive.aspx.cs">
+      <DependentUpon>w_dlg_wc_receive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_receive.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_receive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_trn_member.aspx.cs">
+      <DependentUpon>w_dlg_wc_trn_member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_trn_member.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_trn_member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_walfare_reqedit.aspx.cs">
+      <DependentUpon>w_dlg_wc_walfare_reqedit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\dlg\w_dlg_wc_walfare_reqedit.aspx.designer.cs">
+      <DependentUpon>w_dlg_wc_walfare_reqedit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\uc_w_sheet_requestnew_light\UcMain.ascx.cs">
+      <DependentUpon>UcMain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\uc_w_sheet_requestnew_light\UcMain.ascx.designer.cs">
+      <DependentUpon>UcMain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\uc_w_sheet_requestnew_light\UcOther.ascx.cs">
+      <DependentUpon>UcOther.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\uc_w_sheet_requestnew_light\UcOther.ascx.designer.cs">
+      <DependentUpon>UcOther.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\uc_w_sheet_requestnew_light\UcSlip.ascx.cs">
+      <DependentUpon>UcSlip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\uc_w_sheet_requestnew_light\UcSlip.ascx.designer.cs">
+      <DependentUpon>UcSlip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_checkduplicate.aspx.cs">
+      <DependentUpon>w_sheet_checkduplicate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_checkduplicate.aspx.designer.cs">
+      <DependentUpon>w_sheet_checkduplicate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_checkduplicate_not_card_ps.aspx.cs">
+      <DependentUpon>w_sheet_checkduplicate_not_card_ps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_checkduplicate_not_card_ps.aspx.designer.cs">
+      <DependentUpon>w_sheet_checkduplicate_not_card_ps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_checkduplicate_not_mb_no.aspx.cs">
+      <DependentUpon>w_sheet_checkduplicate_not_mb_no.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_checkduplicate_not_mb_no.aspx.designer.cs">
+      <DependentUpon>w_sheet_checkduplicate_not_mb_no.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_approve_reqwalfare.aspx.cs">
+      <DependentUpon>w_sheet_wc_approve_reqwalfare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_approve_reqwalfare.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_approve_reqwalfare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cancel_approve_paid.aspx.cs">
+      <DependentUpon>w_sheet_wc_cancel_approve_paid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_cancel_approve_paid.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_cancel_approve_paid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_create_branch.aspx.cs">
+      <DependentUpon>w_sheet_wc_create_branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_create_branch.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_create_branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_create_username.aspx.cs">
+      <DependentUpon>w_sheet_wc_create_username.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_create_username.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_create_username.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_criteria_bank_cstype.aspx.cs">
+      <DependentUpon>w_sheet_wc_criteria_bank_cstype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_criteria_bank_cstype.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_criteria_bank_cstype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_deptedit.aspx.cs">
+      <DependentUpon>w_sheet_wc_deptedit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_deptedit.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_deptedit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_expexcel_membcard.aspx.cs">
+      <DependentUpon>w_sheet_wc_expexcel_membcard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_expexcel_membcard.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_expexcel_membcard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_export_excel.aspx.cs">
+      <DependentUpon>w_sheet_wc_export_excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_export_excel.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_export_excel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_find_req.aspx.cs">
+      <DependentUpon>w_sheet_wc_find_req.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_find_req.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_find_req.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_fine_person.aspx.cs">
+      <DependentUpon>w_sheet_wc_fine_person.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_fine_person.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_fine_person.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_group_paid.aspx.cs">
+      <DependentUpon>w_sheet_wc_group_paid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_group_paid.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_group_paid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_group_paid_cancel.aspx.cs">
+      <DependentUpon>w_sheet_wc_group_paid_cancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_group_paid_cancel.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_group_paid_cancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_inform.aspx.cs">
+      <DependentUpon>w_sheet_wc_inform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_inform.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_inform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_inform_adminn.aspx.cs">
+      <DependentUpon>w_sheet_wc_inform_adminn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_inform_adminn.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_inform_adminn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_ma_programer.aspx.cs">
+      <DependentUpon>w_sheet_wc_ma_programer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_ma_programer.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_ma_programer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_memo_admin.aspx.cs">
+      <DependentUpon>w_sheet_wc_memo_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_memo_admin.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_memo_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_memo_cancal.aspx.cs">
+      <DependentUpon>w_sheet_wc_memo_cancal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_memo_cancal.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_memo_cancal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_paid_add.aspx.cs">
+      <DependentUpon>w_sheet_wc_paid_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_paid_add.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_paid_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_pay_die.aspx.cs">
+      <DependentUpon>w_sheet_wc_pay_die.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_pay_die.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_pay_die.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_permission_all.aspx.cs">
+      <DependentUpon>w_sheet_wc_permission_all.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_permission_all.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_permission_all.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_proc_Age.aspx.cs">
+      <DependentUpon>w_sheet_wc_proc_Age.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_proc_Age.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_proc_Age.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_requestnew_light.aspx.cs">
+      <DependentUpon>w_sheet_wc_requestnew_light.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_requestnew_light.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_requestnew_light.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_revive.aspx.cs">
+      <DependentUpon>w_sheet_wc_revive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_revive.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_revive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_save_die_month.aspx.cs">
+      <DependentUpon>w_sheet_wc_save_die_month.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_save_die_month.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_save_die_month.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_trn_member.aspx.cs">
+      <DependentUpon>w_sheet_wc_trn_member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_trn_member.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_trn_member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_trn_member_branch.aspx.cs">
+      <DependentUpon>w_sheet_wc_trn_member_branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_trn_member_branch.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_trn_member_branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_trn_member_confirm.aspx.cs">
+      <DependentUpon>w_sheet_wc_trn_member_confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_trn_member_confirm.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_trn_member_confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_ucf_round_for_pay.aspx.cs">
+      <DependentUpon>w_sheet_wc_ucf_round_for_pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_ucf_round_for_pay.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_ucf_round_for_pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_ucf_round_regisfixed.aspx.cs">
+      <DependentUpon>w_sheet_wc_ucf_round_regisfixed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_ucf_round_regisfixed.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_ucf_round_regisfixed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_walfare_new.aspx.cs">
+      <DependentUpon>w_sheet_wc_walfare_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_walfare_new.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_walfare_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_walfare_paid.aspx.cs">
+      <DependentUpon>w_sheet_wc_walfare_paid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_walfare_paid.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_walfare_paid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_walfare_reqedit.aspx.cs">
+      <DependentUpon>w_sheet_wc_walfare_reqedit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_walfare_reqedit.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_walfare_reqedit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_feeyear.aspx.cs">
+      <DependentUpon>u_cri_wc_feeyear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_feeyear.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_feeyear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_raccno.aspx.cs">
+      <DependentUpon>u_cri_raccno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_raccno.aspx.designer.cs">
+      <DependentUpon>u_cri_raccno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdate_rmembno_slip.aspx.cs">
+      <DependentUpon>u_cri_rdate_rmembno_slip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdate_rmembno_slip.aspx.designer.cs">
+      <DependentUpon>u_cri_rdate_rmembno_slip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdate_rmembno_slip_paid.aspx.cs">
+      <DependentUpon>u_cri_rdate_rmembno_slip_paid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdate_rmembno_slip_paid.aspx.designer.cs">
+      <DependentUpon>u_cri_rdate_rmembno_slip_paid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdate_rmembno_slip_reg.aspx.cs">
+      <DependentUpon>u_cri_rdate_rmembno_slip_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdate_rmembno_slip_reg.aspx.designer.cs">
+      <DependentUpon>u_cri_rdate_rmembno_slip_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_branchid.aspx.cs">
+      <DependentUpon>u_cri_rdocno_branchid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_branchid.aspx.designer.cs">
+      <DependentUpon>u_cri_rdocno_branchid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_branchid_58.aspx.cs">
+      <DependentUpon>u_cri_rdocno_branchid_58.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_branchid_58.aspx.designer.cs">
+      <DependentUpon>u_cri_rdocno_branchid_58.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_branchid_membtype.aspx.cs">
+      <DependentUpon>u_cri_rdocno_branchid_membtype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_branchid_membtype.aspx.designer.cs">
+      <DependentUpon>u_cri_rdocno_branchid_membtype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_branchid_paid_later.aspx.cs">
+      <DependentUpon>u_cri_rdocno_branchid_paid_later.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_branchid_paid_later.aspx.designer.cs">
+      <DependentUpon>u_cri_rdocno_branchid_paid_later.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_montly.aspx.cs">
+      <DependentUpon>u_cri_rdocno_montly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_rdocno_montly.aspx.designer.cs">
+      <DependentUpon>u_cri_rdocno_montly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_dia_pay.aspx.cs">
+      <DependentUpon>u_cri_wc_dia_pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_dia_pay.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_dia_pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_paybook.aspx.cs">
+      <DependentUpon>u_cri_wc_paybook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_paybook.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_paybook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_recievefixedyear.aspx.cs">
+      <DependentUpon>u_cri_wc_recievefixedyear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_recievefixedyear.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_recievefixedyear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_recievefixedyear_frombranch.aspx.cs">
+      <DependentUpon>u_cri_wc_recievefixedyear_frombranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_recievefixedyear_frombranch.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_recievefixedyear_frombranch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_statement_year.aspx.cs">
+      <DependentUpon>u_cri_wc_statement_year.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_statement_year.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_statement_year.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_summary_all.aspx.cs">
+      <DependentUpon>u_cri_wc_summary_all.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_summary_all.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_summary_all.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_transfer.aspx.cs">
+      <DependentUpon>u_cri_wc_transfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_transfer.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_transfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_transfer_all.aspx.cs">
+      <DependentUpon>u_cri_wc_transfer_all.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\u_cri_wc_transfer_all.aspx.designer.cs">
+      <DependentUpon>u_cri_wc_transfer_all.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\WebSheet.cs" />
+    <Compile Include="CustomControl\ApplicationsControl.ascx.cs">
+      <DependentUpon>ApplicationsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ApplicationsControl.ascx.designer.cs">
+      <DependentUpon>ApplicationsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\CmPage\debug_page.aspx.cs">
+      <DependentUpon>debug_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\CmPage\debug_page.aspx.designer.cs">
+      <DependentUpon>debug_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\CmPage\setting_page.aspx.cs">
+      <DependentUpon>setting_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\CmPage\setting_page.aspx.designer.cs">
+      <DependentUpon>setting_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\AjaxReportProcess.aspx.cs">
+      <DependentUpon>AjaxReportProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\AjaxReportProcess.aspx.designer.cs">
+      <DependentUpon>AjaxReportProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\dlg\w_dlg_report_progress.aspx.cs">
+      <DependentUpon>w_dlg_report_progress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criteria\dlg\w_dlg_report_progress.aspx.designer.cs">
+      <DependentUpon>w_dlg_report_progress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\LoginControl.ascx.cs">
+      <DependentUpon>LoginControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControl\LoginControl.ascx.designer.cs">
+      <DependentUpon>LoginControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\membercheck.ascx.cs">
+      <DependentUpon>membercheck.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControl\membercheck.ascx.designer.cs">
+      <DependentUpon>membercheck.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\MenuBarControl.ascx.cs">
+      <DependentUpon>MenuBarControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControl\MenuBarControl.ascx.designer.cs">
+      <DependentUpon>MenuBarControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\MenuSubControl.ascx.cs">
+      <DependentUpon>MenuSubControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControl\MenuSubControl.ascx.designer.cs">
+      <DependentUpon>MenuSubControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\TopBarControl.ascx.cs">
+      <DependentUpon>TopBarControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControl\TopBarControl.ascx.designer.cs">
+      <DependentUpon>TopBarControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exit.aspx.cs">
+      <DependentUpon>Exit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exit.aspx.designer.cs">
+      <DependentUpon>Exit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Home_new.aspx.cs">
+      <DependentUpon>Home_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flash\Home_new.aspx.designer.cs">
+      <DependentUpon>Home_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flash\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flash\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frame.Master.cs">
+      <DependentUpon>Frame.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frame.Master.designer.cs">
+      <DependentUpon>Frame.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GraphStreamRender.aspx.cs">
+      <DependentUpon>GraphStreamRender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GraphStreamRender.aspx.designer.cs">
+      <DependentUpon>GraphStreamRender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report.Master.cs">
+      <DependentUpon>Report.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.Master.designer.cs">
+      <DependentUpon>Report.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDefault.aspx.cs">
+      <DependentUpon>ReportDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportDefault.aspx.designer.cs">
+      <DependentUpon>ReportDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChangePass.aspx" />
+    <Content Include="Css\FrameLayout.css" />
+    <Content Include="Css\MenuBar.css" />
+    <Content Include="Css\MenuSub.css" />
+    <Content Include="Css\Topbar.css" />
+    <Content Include="CustomControl\ApplicationsControl.ascx" />
+    <Content Include="Criteria\CmPage\debug_page.aspx" />
+    <Content Include="Criteria\CmPage\setting_page.aspx" />
+    <Content Include="Criteria\AjaxReportProcess.aspx" />
+    <Content Include="Criteria\dlg\w_dlg_report_progress.aspx" />
+    <Content Include="Css\layout_page.css" />
+    <Content Include="Css\layout_text.css" />
+    <Content Include="CustomControl\LoginControl.ascx" />
+    <Content Include="CustomControl\MenuBarControl.ascx" />
+    <Content Include="CustomControl\TopBarControl.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="Exit.aspx" />
+    <Content Include="Flash\Expand1.png" />
+    <Content Include="Flash\Expand2.png" />
+    <Content Include="Flash\Expand3.png" />
+    <Content Include="Flash\Expand4.png" />
+    <Content Include="Flash\Home_new.aspx" />
+    <Content Include="Flash\HomeBG.jpg" />
+    <Content Include="Flash\Home.aspx" />
+    <Content Include="Flash\index.aspx" />
+    <Content Include="Flash\Main1.png" />
+    <Content Include="Flash\Main2.png" />
+    <Content Include="Flash\Main3.png" />
+    <Content Include="Flash\Main4.png" />
+    <Content Include="Flash\Main5.png" />
+    <Content Include="Flash\MenuItem01.gif" />
+    <Content Include="GraphStreamRender.aspx" />
+    <Content Include="img\38075.jpg" />
+    <Content Include="img\arrow.ico" />
+    <Content Include="img\back-icon.png" />
+    <Content Include="img\background.jpg" />
+    <Content Include="img\band_black.jpg" />
+    <Content Include="img\bg_foot.jpg" />
+    <Content Include="img\bg_mid_menu.gif" />
+    <Content Include="img\cat_logo.gif" />
+    <Content Include="img\cat_logo120.gif" />
+    <Content Include="img\cat_logo600.gif" />
+    <Content Include="img\chgpwd_icon.png" />
+    <Content Include="img\complete.gif" />
+    <Content Include="img\content_right.gif" />
+    <Content Include="img\cursor.gif" />
+    <Content Include="img\error.gif" />
+    <Content Include="img\exit.png" />
+    <Content Include="img\fx.gif" />
+    <Content Include="img\header_top.gif" />
+    <Content Include="img\HomeBG.jpg" />
+    <Content Include="img\home\button1.gif" />
+    <Content Include="img\home\button1_hover.gif" />
+    <Content Include="img\home\HomeBG.jpg" />
+    <Content Include="img\home_icon.gif" />
+    <Content Include="img\icoReport.png" />
+    <Content Include="img\ico\clipboard.ico" />
+    <Content Include="img\ico\clipboard.png" />
+    <Content Include="img\ico\folder.ico" />
+    <Content Include="img\ico\folder.png" />
+    <Content Include="img\ico\MyDocuments.png" />
+    <Content Include="img\ico\Preview-icon.png" />
+    <Content Include="img\ico\print.ico" />
+    <Content Include="img\ico\print.png" />
+    <Content Include="img\ico\save.ico" />
+    <Content Include="img\ico\save.png" />
+    <Content Include="img\ico\setting.png" />
+    <Content Include="img\ico\systemmenu.png" />
+    <Content Include="img\inner_h_b1.gif" />
+    <Content Include="img\inner_h_b2.gif" />
+    <Content Include="img\isc - Copy.jpg" />
+    <Content Include="img\isc.jpg" />
+    <Content Include="img\Log Off.ico" />
+    <Content Include="img\Log Off.png" />
+    <Content Include="img\login_bg.gif" />
+    <Content Include="img\margin\lefttop.jpg" />
+    <Content Include="img\margin\midtop.jpg" />
+    <Content Include="img\margin\righttop.jpg" />
+    <Content Include="img\margin\topbar.jpg" />
+    <Content Include="img\MenuItem01.gif" />
+    <Content Include="img\nav_end.gif" />
+    <Content Include="img\nav_end2.gif" />
+    <Content Include="img\nav_tab.gif" />
+    <Content Include="img\nav_tab2.gif" />
+    <Content Include="img\nav_tab_hover.gif" />
+    <Content Include="img\nav_tab_visited.gif" />
+    <Content Include="img\pointer1.png" />
+    <Content Include="img\processing.gif" />
+    <Content Include="img\tab_bg.jpg" />
+    <Content Include="img\tab_expan.jpg" />
+    <Content Include="img\tab_L.gif" />
+    <Content Include="img\tab_R.gif" />
+    <Content Include="img\tools2[1].png" />
+    <Content Include="img\tranparent.png" />
+    <Content Include="img\warning.gif" />
+    <Content Include="img\white.gif" />
+    <Content Include="index.aspx" />
+    <Content Include="Css\js\Ajax.js" />
+    <Content Include="Css\js\Copy of js.js" />
+    <Content Include="Css\js\DetectBrowser.js" />
+    <Content Include="Css\js\Gcoop.js" />
+    <Content Include="Css\js\js.js" />
+    <Content Include="Css\js\WebState.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Report.Master" />
+    <Content Include="ReportDefault.aspx" />
+    <Content Include="test.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Frame.Master" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="App_Themes\Skin1\Skin1.skin" />
+    <None Include="DataWindow\walfare\w_sheet_wc_walfare_paid.pbl" />
+    <None Include="DataWindow\walfare\w_sheet_wc_walfare_reqedit.pbl" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLibrary\CommonLibrary.csproj">
+      <Project>{779DB351-82F3-4C84-ABDD-D64742A228A4}</Project>
+      <Name>CommonLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBAccess\DBAccess.csproj">
+      <Project>{C1DFDA82-6DAB-462B-8A00-38D3BBD5D2CB}</Project>
+      <Name>DBAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GcoopServiceCs\GcoopServiceCs.csproj">
+      <Project>{5E36529A-0A0C-4CEE-A910-CCC4F8938D18}</Project>
+      <Name>GcoopServiceCs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SecurityEngine\SecurityEngine.csproj">
+      <Project>{06689B1F-AB8F-4D0B-AD05-0C8297C176B1}</Project>
+      <Name>SecurityEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="js\Documents\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>49372</DevelopmentServerPort>
+          <DevelopmentServerVPath>/GCOOP/Saving/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/FSCT/GCOOP/Saving</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/FSCT/GCOOP/Saving</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,179 @@
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if "" == "" set NET_FRAMEWORK120=C:\WINDOWS\Microsoft.NET\Framework\v3.5 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>C:\WINDOWS\Microsoft.NET\Framework\v3.5\csc
+Microsoft (R) Visual C# 2008 Compiler version 3.5.21022.8
+for Microsoft (R) .NET Framework version 3.5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+fatal error CS2008: No inputs specified
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if errorlevel 9009 exit 3 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>setlocal
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if exist "C:\GCOOP\PBService\depositservice\pb2csdotnettempout\*.cs" del "C:\GCOOP\PBService\depositservice\pb2csdotnettempout\*.cs" 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>rename "C:\GCOOP\PBService\depositservice\pb2csdotnettempout\AssemblyInfo.bak" "AssemblyInfo.cs" 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>"C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\pb2cs" @"C:\GCOOP\PBService\depositservice\pb2csdotnettempout\projectinfo.txt" 
+n_cst_dbconnectservice_web,n_cst_dbconnectservice_web,of_connectdb:I,of_connectdb,,of_connectdb:IS,of_connectdb,,of_disconnectdb:I,of_disconnectdb,,
+n_cst_deposit_service,n_cst_deposit_service,of_deposit:ISSSRS,of_deposit,,of_init:Q,of_init,,of_init_deptslip:ISSSWSRSRS,of_init_deptslip,,of_init_deptslip_calint:ISSSWSRSRSRS,of_init_deptslip_calint,,of_init_openslip:ISSSWRSRS,of_init_openslip,,of_openaccount:ISSSIRSRS,of_openaccount,,of_settrans:ICn_cst_dbconnectservice_web.,of_settrans,,of_withdraw_close:ISSRS,of_withdraw_close,,
+Type-checking (pass 1) system (system)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Parsing c:\gcoop\pbservice\depositservice\depositservice.pbl (depositservice)
+Parsing c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptslip)
+Parsing c:\gcoop\pbservice\depositservice\depositservice.pbl (str_prncfixed)
+Parsing c:\gcoop\pbservice\depositservice\depositservice.pbl (n_cst_deposit_service)
+Parsing c:\gcoop\pbservice\depositservice\depositservice.pbl (str_cheque)
+Parsing c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptstatement)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (depositservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (n_cst_deposit_service)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_cheque)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptslip)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptstatement)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_prncfixed)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (depositservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (n_cst_deposit_service)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_cheque)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptslip)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptstatement)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_prncfixed)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (depositservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (n_cst_deposit_service)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_cheque)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptslip)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptstatement)
+Type-checking (pass 1) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_prncfixed)
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking methods(pass 2) c:\gcoop\pbservice\depositservice\depositservice.pbl (depositservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Type-checking methods(pass 2) c:\gcoop\pbservice\depositservice\depositservice.pbl (n_cst_deposit_service)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_cheque)
+Type-checking methods(pass 2) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptslip)
+Type-checking methods(pass 2) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptstatement)
+Type-checking methods(pass 2) c:\gcoop\pbservice\depositservice\depositservice.pbl (str_prncfixed)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (depositservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (n_cst_deposit_service)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptstatement)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (depositservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (n_cst_deposit_service)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptstatement)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (depositservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (n_cst_deposit_service)
+Emitting c:\gcoop\pbservice\depositservice\depositservice.pbl (str_dpdeptstatement)
+
+
+Error Summary : 0 error(s) 
+
+
+
+Warning Summary : 0 warning(s) 
+
+
+
+Compile complete -- 0 error(s), 0 warning(s)
+
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if ERRORLEVEL 1 exit 1 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>call build.bat c- "C:\GCOOP\PBService\depositservice\pb2csdotnettempout\csc_output_file_name.txt" 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>setlocal
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if "c-" == "" goto usage  
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if "C:\Program Files\Sybase\PowerBuilder 12.0\DotNET" == "" goto sethome 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if "" == "" set NET_FRAMEWORK_PB$PBVERSION$=C:\WINDOWS\Microsoft.NET\Framework\v3.5 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>md bin 
+A subdirectory or file bin already exists.
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>md install 
+A subdirectory or file install already exists.
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if "c-" == "c-" goto notcopy 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>reg import "C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\PBExceptionTrace.reg" 
+The operation completed successfully.
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>xcopy /D /Y "c:\gcoop\pbservice\commonservice\commonservice.pbd" bin\ 
+0 File(s) copied
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>xcopy /D /Y "c:\gcoop\pbservice\commonservice\commonservice.pbd" install\ 
+0 File(s) copied
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>xcopy /D /Y "c:\gcoop\pbservice\depositservice\depositservice.pbd" bin\ 
+C:\gcoop\pbservice\depositservice\depositservice.pbd
+1 File(s) copied
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>xcopy /D /Y "c:\gcoop\pbservice\depositservice\depositservice.pbd" install\ 
+C:\gcoop\pbservice\depositservice\depositservice.pbd
+1 File(s) copied
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if "C:\GCOOP\PBService\depositservice\pb2csdotnettempout\csc_output_file_name.txt" == "" (C:\WINDOWS\Microsoft.NET\Framework\v3.5\csc /t:library /debug /nowarn:1591 /doc:"bin\pbservice.deposit.xml"   /platform:x86  /linkres:bin\commonservice.pbd /linkres:bin\depositservice.pbd "/r:C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Core.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Interop.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Common.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Win.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.WinWebDataWindowCommon.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.ejb.net.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.iiop.net.dll" /out:"bin\pbservice.deposit.dll" *.cs )  else (C:\WINDOWS\Microsoft.NET\Framework\v3.5\csc /t:library /debug /nowarn:1591 /doc:"bin\pbservice.deposit.xml"   /platform:x86  /linkres:bin\commonservice.pbd /linkres:bin\depositservice.pbd "/r:C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Core.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Interop.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Common.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Win.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.WinWebDataWindowCommon.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.ejb.net.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.iiop.net.dll" /out:"bin\pbservice.deposit.dll" *.cs  1>"C:\GCOOP\PBService\depositservice\pb2csdotnettempout\csc_output_file_name.txt" ) 
+Build Succeeded.
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>goto end 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>xcopy /D /Y "bin\pbservice.deposit.dll" install\ 
+bin\pbservice.deposit.dll
+1 File(s) copied
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>endlocal
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if ERRORLEVEL 1 exit 2 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>if exist "C:\GCOOP\PBService\depositservice\pb2csdotnettempout\*.cs" del "C:\GCOOP\PBService\depositservice\pb2csdotnettempout\*.cs" 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>goto end 
+
+C:\GCOOP\PBService\depositservice\pb2csdotnettempout>endlocal
+Generating PowerBuilder .NET assemblies succeeded.
+Warning: Cannot copy the log.txt file to the output directory.

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WinWebServiceMonitor.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WinWebServiceMonitor_WsCommon_Common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/EGAT/GCOOP/WebService/Common.asmx</Value>
+    </Setting>
+    <Setting Name="WinWebServiceMonitor_WsShrlon_Shrlon" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/EGAT/GCOOP/WebService/Shrlon.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

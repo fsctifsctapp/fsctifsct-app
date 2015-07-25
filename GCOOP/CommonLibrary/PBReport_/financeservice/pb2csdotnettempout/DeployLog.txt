@@ -1,0 +1,160 @@
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>csc
+Microsoft (R) Visual C# 2008 Compiler version 3.5.30729.1
+for Microsoft (R) .NET Framework version 3.5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+fatal error CS2008: No inputs specified
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if errorlevel 9009 exit 3 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>setlocal
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if exist "C:\GCOOP\PBService\financeservice\pb2csdotnettempout\*.cs" del "C:\GCOOP\PBService\financeservice\pb2csdotnettempout\*.cs" 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>rename "C:\GCOOP\PBService\financeservice\pb2csdotnettempout\AssemblyInfo.bak" "AssemblyInfo.cs" 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>"C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\pb2cs" @"C:\GCOOP\PBService\financeservice\pb2csdotnettempout\projectinfo.txt" 
+n_cst_dbconnectservice,n_cst_dbconnectservice,of_connectdb:IS,of_connectdb,,of_disconnectdb:I,of_disconnectdb,,
+n_cst_finance_service,n_cst_finance_service,of_init_fincashcontrol:ISSRS,of_init_fincashcontrol,,of_init_openday:ISSWSRS,of_init_openday,,of_open_day:IS,of_open_day,,of_settrans:ICn_cst_dbconnectservice.,of_settrans,,
+Type-checking (pass 1) system (system)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Parsing c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_calendarservice)
+Parsing c:\gcoop\pbservice\financeservice\financeservice.pbl (n_cst_finance_service)
+Parsing c:\gcoop\pbservice\financeservice\financeservice.pbl (financeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\financeservice\financeservice.pbl (financeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_calendarservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) c:\gcoop\pbservice\financeservice\financeservice.pbl (n_cst_finance_service)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking (pass 1) c:\gcoop\pbservice\financeservice\financeservice.pbl (financeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_calendarservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) c:\gcoop\pbservice\financeservice\financeservice.pbl (n_cst_finance_service)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking (pass 1) c:\gcoop\pbservice\financeservice\financeservice.pbl (financeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_calendarservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) c:\gcoop\pbservice\financeservice\financeservice.pbl (n_cst_finance_service)
+Type-checking (pass 1) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking methods(pass 2) c:\gcoop\pbservice\financeservice\financeservice.pbl (financeservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_calendarservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking methods(pass 2) c:\gcoop\pbservice\financeservice\financeservice.pbl (n_cst_finance_service)
+Type-checking methods(pass 2) c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting c:\gcoop\pbservice\financeservice\financeservice.pbl (financeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_calendarservice)
+Emitting c:\gcoop\pbservice\financeservice\financeservice.pbl (n_cst_finance_service)
+Emitting c:\gcoop\pbservice\financeservice\financeservice.pbl (financeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_calendarservice)
+Emitting c:\gcoop\pbservice\financeservice\financeservice.pbl (n_cst_finance_service)
+Emitting c:\gcoop\pbservice\financeservice\financeservice.pbl (financeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Emitting c:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_calendarservice)
+Emitting c:\gcoop\pbservice\financeservice\financeservice.pbl (n_cst_finance_service)
+
+
+Error Summary : 0 error(s) 
+
+
+
+Warning Summary : 0 warning(s) 
+
+
+
+Compile complete -- 0 error(s), 0 warning(s)
+
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if ERRORLEVEL 1 exit 1 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>call build.bat c- "C:\GCOOP\PBService\financeservice\pb2csdotnettempout\csc_output_file_name.txt" 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>setlocal
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if "c-" == "" goto usage  
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if "C:\Program Files\Sybase\PowerBuilder 12.0\DotNET" == "" goto sethome 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>md bin 
+A subdirectory or file bin already exists.
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>md install 
+A subdirectory or file install already exists.
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if "c-" == "c-" goto notcopy 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>reg import "C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\PBExceptionTrace.reg" 
+
+The operation completed successfully
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>xcopy /D /Y "c:\gcoop\pbservice\commonservice\commonservice.pbd" bin\ 
+C:\gcoop\pbservice\commonservice\commonservice.pbd
+1 File(s) copied
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>xcopy /D /Y "c:\gcoop\pbservice\commonservice\commonservice.pbd" install\ 
+C:\gcoop\pbservice\commonservice\commonservice.pbd
+1 File(s) copied
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>xcopy /D /Y "c:\gcoop\pbservice\financeservice\financeservice.pbd" bin\ 
+C:\gcoop\pbservice\financeservice\financeservice.pbd
+1 File(s) copied
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>xcopy /D /Y "c:\gcoop\pbservice\financeservice\financeservice.pbd" install\ 
+C:\gcoop\pbservice\financeservice\financeservice.pbd
+1 File(s) copied
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if "C:\GCOOP\PBService\financeservice\pb2csdotnettempout\csc_output_file_name.txt" == "" (csc /t:library /debug /nowarn:1591 /doc:"bin\pbservice.finance.xml"   /platform:x86  /linkres:bin\commonservice.pbd /linkres:bin\financeservice.pbd "/r:C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Core.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Interop.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Common.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Win.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.WinWebDataWindowCommon.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.ejb.net.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.iiop.net.dll" /out:"bin\pbservice.finance.dll" *.cs )  else (csc /t:library /debug /nowarn:1591 /doc:"bin\pbservice.finance.xml"   /platform:x86  /linkres:bin\commonservice.pbd /linkres:bin\financeservice.pbd "/r:C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Core.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Interop.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Common.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Win.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.WinWebDataWindowCommon.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.ejb.net.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.iiop.net.dll" /out:"bin\pbservice.finance.dll" *.cs  1>"C:\GCOOP\PBService\financeservice\pb2csdotnettempout\csc_output_file_name.txt" ) 
+Build Succeeded.
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>goto end 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>xcopy /D /Y "bin\pbservice.finance.dll" install\ 
+bin\pbservice.finance.dll
+1 File(s) copied
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>endlocal
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if ERRORLEVEL 1 exit 2 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>if exist "C:\GCOOP\PBService\financeservice\pb2csdotnettempout\*.cs" del "C:\GCOOP\PBService\financeservice\pb2csdotnettempout\*.cs" 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>goto end 
+
+C:\GCOOP\PBService\financeservice\pb2csdotnettempout>endlocal
+Generating PowerBuilder .NET assemblies succeeded.
+Warning: Cannot copy the log.txt file to the output directory.

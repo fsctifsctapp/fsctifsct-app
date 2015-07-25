@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CommonLibrary.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CommonLibrary_WsCommon_Common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/FSCT/GCOOP/WebService/Common.asmx</Value>
+    </Setting>
+    <Setting Name="CommonLibrary_WsWalfare_WsWalfare" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/FSCT/GCOOP/WebService/Walfare.asmx</Value>
+    </Setting>
+    <Setting Name="CommonLibrary_WsReport_Report" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/FSCT/GCOOP/WebServiceReport/Report.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

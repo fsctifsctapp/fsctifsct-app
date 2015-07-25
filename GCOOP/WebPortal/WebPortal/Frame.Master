@@ -1,0 +1,219 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Frame.master.cs" Inherits="WebPortal.Frame" %>
+<% Page_LoadComplete(); %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+   <link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout_page.css" />
+    <link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout_text.css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function PopUpWindow() {
+            //		   var elm = window.location.href.split('?');
+            //		   var urlPop = "http://www.xxx.com?";
+            //		   try{
+            //				 urlPop  +=elm[1];
+            //		   }catch(e){
+
+            //		   }
+
+            window.open("../ItmWeb/w_sheet_wpt_forgetpassword.aspx", "", "status=no,width=400,height=250");
+        }
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div class="page-container">
+        <!-- A. HEADER -->
+        <div class="header">
+            <!-- A.1 HEADER TOP -->
+            <div class="header-top">
+                <a class="sitelogo" href="#" title="Go to Start page"></a>
+                <div class="sitename">
+                    <h1>
+                        <a href="http://www.cattelecom.com/" title="Go to Start page" target="_blank">CAT Telecom
+                            Public Company Limited</a></h1>
+                    <h2>
+                        บริษัท กสท โทรคมนาคม จำกัด (มหาชน)</h2>
+                </div>
+                <div class="applicationname">
+                    <asp:Label ID="lbl_applicationname" runat="server" Text=""></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_loginby" runat="server" Text="" CssClass="loginby"></asp:Label>
+                </div>
+            </div>
+            <!-- A.2 HEADER MIDDLE -->
+            <div class="header-middle">
+                <div class="popupmenu" id="popupmenu" style="display: none;" onclick="closePopup('popupmenu')">
+                    <h2>
+                        <asp:Label ID="lbl_sysapphead" runat="server" Text=""></asp:Label></h2>
+                    <table>
+                        <tr>
+                            <asp:Literal ID="ltr_menu" runat="server"></asp:Literal>
+                        </tr>
+                    </table>
+                </div>
+                <asp:Panel ID="pnl_toolbar" runat="server" Visible="false">
+                    <div class="nav2">
+<%--                        <ul>
+                            <li><a href="#" onclick="openPopup('popupmenu');">
+                                <img alt="" src="img/ico/systemmenu.png" />
+                                <h3>ListMenu</h3>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">
+                                <img alt="" src="img/ico/clipboard.ico" /><h3>
+                                    New</h3>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">
+                                <img alt="" src="img/ico/folder.ico" /><h3>
+                                    Open</h3>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">
+                                <img alt="" src="img/ico/save.ico" /><h3>
+                                    Save</h3>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">
+                                <img alt="" src="img/ico/Preview-icon.png" /><h3>
+                                    Preview</h3>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">
+                                <img alt="" src="img/ico/print.ico" /><h3>
+                                    Print</h3>
+                            </a></li>
+                        </ul>--%>
+                    </div>
+                </asp:Panel>
+                <div class="nav0">
+                    <ul>
+                        <li>
+                            <table>
+                                <tr>
+                                    <td>
+                                       <%-- 
+                                        <a href="http://localhost:2743/flash/home.aspx" title="Home">
+                                            <asp:Image ID="Image1" runat="server" ImageUrl="img/home_icon.gif" />
+                                            <br />
+                                            Home</a>--%>
+                                    </td>
+                                    <asp:Panel ID="pnl_logout" runat="server" Visible="false">
+                                        <td>
+
+                                            <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="Default.aspx?cmd=LogOut">
+                                            <asp:Image ID="Image3" runat="server" ImageUrl="img/Log Off.ico" />
+                                            <br />
+                                                Log out
+                                            </asp:HyperLink>
+<%--                                            <a href="http://localhost:2743/flash/home.aspx" title="Log out">
+                                                <asp:Image ID="Image2" runat="server" ImageUrl="img/Log Off.ico" />
+                                                <br />
+                                                Log out</a>--%>
+                                        </td>
+                                    </asp:Panel>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- A.3 HEADER BOTTOM -->
+            <%--<div class="header-bottom">
+                                <div class="inner-header-buttom">
+                    <div class="inner-h-b-content">
+                        inner-header-buttom
+                    </div>
+                </div>
+            </div>--%>
+        </div>
+        <div class="main">
+            <div class="main-content">
+                <h1 class="pagetitle">
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                </h1>
+                <div class="content_left">
+                    <asp:Panel ID="pnl_leftcontent" runat="server" Visible="true">
+                        <asp:Literal ID="LiteralLogIn" runat="server"></asp:Literal>
+                        <h1 class="first">
+                            <asp:Label ID="lbl_submenu" runat="server" Text="">ข้อมูลสมาชิก</asp:Label></h1>
+                        <dl class="nav3-grid">
+                    <!------     Link Child      //-->
+                        <dt>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ItmWeb/w_sheet_wpt_share.aspx?cmd=Share">ข้อมูลหุ้น</asp:HyperLink>
+                        </dt>
+                        <dt>
+                        <asp:HyperLink ID="HyperLink2" runat="server" Font-Names="tahoma" 
+                            NavigateUrl="ItmWeb/w_sheet_wpt_deposit.aspx?page=Deposit">ข้อมูลเงินฝาก</asp:HyperLink>
+                    </dt>
+                    <dt>
+                        <asp:HyperLink ID="HyperLink3" runat="server" Font-Names="tahoma" 
+                            NavigateUrl="ItmWeb/w_sheet_wpt_loan.aspx?page=Loan">ข้อมูลเงินกู้</asp:HyperLink>
+                    </dt>
+                    <dt>
+                        <asp:HyperLink ID="HyperLink4" runat="server" Font-Names="tahoma" 
+                            NavigateUrl="ItmWeb/w_sheet_wpt_loanpermission.aspx?page=Loanpermission">สิทธิกู้</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink5" runat="server" Font-Names="tahoma" 
+                            NavigateUrl="ItmWeb/w_sheet_wpt_collateral.aspx?page=Collateral">ค้ำประกัน</asp:HyperLink>
+                    </dt>
+                    <dt>
+                        <asp:HyperLink ID="HyperLink6" runat="server" Font-Names="tahoma" 
+                            NavigateUrl="ItmWeb/w_sheet_wpt_keeping.aspx?page=Keeping">รายการหักประจำเดือน</asp:HyperLink>
+                    </dt>
+<%--                    <dt>
+                        <asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="ItmWeb/w_sheet_wpt_approve_loan.aspx?page=Approve_Loan">การอนุมัติเงินกู้</asp:HyperLink>
+                    </dt>--%>
+                    <dt>
+                        <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="ItmWeb/w_sheet_wpt_divavg.aspx?page=DivAvg">เงินปันผล-เฉลี่ยคืน</asp:HyperLink>
+                    </dt>     
+                    <dt>
+                        <asp:HyperLink ID="HyperLink7" runat="server" Font-Names="tahoma" 
+                            NavigateUrl="ItmWeb/w_sheet_wpt_changepassword.aspx?page=Changepassword">เปลี่ยนรหัสผ่าน</asp:HyperLink>
+                    </dt>
+<%--                    <dt>
+                        <asp:HyperLink ID="HyperLink13" runat="server" 
+                            NavigateUrl="ItmWeb/w_sheet_wpt_collateral_check.aspx?page=Collateral_Check">สิทธิการค้ำประกัน</asp:HyperLink>
+                    </dt>--%>
+<%--                    <dt>
+                        <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="ItmWeb/w_sheet_wpt_receipt.aspx?page=Receipt">ใบเสร็จออนไลน์</asp:HyperLink>
+                    </dt>
+                    <dt>
+                        <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="ItmWeb/w_sheet_wpt_sharebal.aspx?page=Sharebal">หนังสือยืนยันยอด</asp:HyperLink>
+                    </dt>
+                    <dt>
+                        <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="ItmWeb/w_sheet_wpt_calloan.aspx?page=Calloan">ตารางคำนวณการผ่อนชำระ</asp:HyperLink>
+                    </dt>--%>
+                        </dl>
+                        <div class="endsubmenu"><br /><br /><br /><br /><br /></div>
+                    </asp:Panel>
+                </div>
+                <div class="content_inner">
+
+                    <asp:ContentPlaceHolder ID="CenterContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright &copy; 2010 Isocare Systems Co.,LTD | All Rights Reserved</p>
+            <p class="credits">
+                Original design by <a href="http://www.isocare.co.th" title="Web Master">Web Master</a>
+                | Adapted by <a href="#" title="Web Master">Web Master</a> | Powered by <a href="#"
+                    title="Content Management System">CMS</a> | <a href="http://www.isocare.co.th" title="Validate XHTML code">
+                        W3C XHTML 1.0</a> | <a href="http://www.isocare.co.th" title="Validate CSS code">W3C
+                            CSS 2.0</a></p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

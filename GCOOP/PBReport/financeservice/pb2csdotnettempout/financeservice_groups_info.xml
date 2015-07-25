@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project AppName="financeservice" > 
+<PBL Name ="commonservice.pbl"> 
+<Group Name ="n_cst_doccontrolservice_u" Namespace ="" /> 
+<Group Name ="n_cst_datetimeservice_u" Namespace ="" /> 
+<Group Name ="n_cst_stringservice_u" Namespace ="" /> 
+<Group Name ="n_cst_dbconnectservice_u" Namespace ="" /> 
+<Group Name ="n_cst_calendarservice_u" Namespace ="" /> 
+</PBL> 
+<PBL Name ="financeservice.pbl"> 
+<Group Name ="financeservice_a" Namespace ="" /> 
+<Group Name ="n_cst_finance_service_u" Namespace ="" /> 
+</PBL> 
+</Project>

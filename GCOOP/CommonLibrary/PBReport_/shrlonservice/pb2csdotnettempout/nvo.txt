@@ -1,0 +1,2 @@
+n_cst_dbconnectservice_web|n_cst_dbconnectservice_web||of_connectdb:I|of_connectdb||of_disconnectdb:I|of_disconnectdb||of_connectdb:IS|of_connectdb|
+n_cst_mb_memb_service|n_cst_mb_memb_service||of_posttomembgain:ISS|of_posttomembgain||of_posttomembexpense:ISS|of_posttomembexpense||of_posttosharemaster:ISS|of_posttosharemaster||of_posttomembmaster:ISS|of_posttomembmaster||of_settrans:QCn_cst_dbconnectservice_web.|of_settrans|

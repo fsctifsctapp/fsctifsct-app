@@ -1,0 +1,2 @@
+n_cst_dbconnectservice_web|n_cst_dbconnectservice_web||of_connectdb:I|of_connectdb||of_disconnectdb:I|of_disconnectdb||of_connectdb:IS|of_connectdb|
+n_cst_deposit_service|n_cst_deposit_service||of_withdraw_close:ISSRS|of_withdraw_close||of_settrans:ICn_cst_dbconnectservice_web.|of_settrans||of_deposit:ISSSRS|of_deposit||of_init:Q|of_init||of_init_deptslip:ISSSWSRSRS|of_init_deptslip||of_init_deptslip_calint:ISSSWSRSRSRS|of_init_deptslip_calint||of_openaccount:ISSSIRSRS|of_openaccount||of_init_openslip:ISSSWRSRS|of_init_openslip|

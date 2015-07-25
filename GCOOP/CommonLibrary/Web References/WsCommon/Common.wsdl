@@ -1,0 +1,2382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://isocare.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://isocare.org/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://isocare.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://isocare.org/">
+      <s:element name="GetPasswordService">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPasswordServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPasswordServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConnectionString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConnectionStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConnectionStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConstantValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConstantValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConstantValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keyWord" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewDocNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="docCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewDocNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewDocNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewDocumentNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="docCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewDocumentNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewDocumentNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatusApplication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatusApplicationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatusApplicationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatusApplicationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatusApplicationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatusApplicationDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationThai">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="app" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApplicationThaiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicationThaiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaseFormatMemberNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaseFormatMemberNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BaseFormatMemberNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBranchId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="csType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBranchIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBranchIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyLoginResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPermissMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPermissMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPermissMenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDDDWXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ddwobj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDDDWXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDDDWXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrinterFormSets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrinterFormSetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrinterFormSetsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrinterFormSetsData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrinterFormSetsDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrinterFormSetsDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefaultPrinterFormSets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefaultPrinterFormSetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDefaultPrinterFormSetsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefaultPrinterFormSetsByIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comIp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefaultPrinterFormSetsByIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDefaultPrinterFormSetsByIPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetXmlDataStore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="libralyList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwobjectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArgsList" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetXmlDataStoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetXmlDataStoreResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTextDataStore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="libralyList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwobjectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArgsList" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTextDataStoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTextDataStoreResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProcessStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wspass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="w_sheet_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProcessStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProcessStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="w_sheet_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoveProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadThaiBath">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="number" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadThaiBathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReadThaiBathResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LastDayOfmonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LastDayOfmonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LastDayOfmonthResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="zPhysicalPathRegistry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="zPhysicalPathRegistryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zPhysicalPathRegistryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="zPhysicalPathXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="zPhysicalPathXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zPhysicalPathXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDataWindow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pblName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="table" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwObjectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rows" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertDataWindowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertDataWindowResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDataWindow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsPass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pblName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="table" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwObjectName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rows" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDataWindowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDataWindowResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="dateTime" type="s:dateTime" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+    <s:schema targetNamespace="http://isocare.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPasswordServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPasswordService" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPasswordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConnectionString" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConnectionStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConstantValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConstantValue" />
+  </wsdl:message>
+  <wsdl:message name="GetConstantValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConstantValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewDocNo" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewDocNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocumentNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewDocumentNo" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocumentNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewDocumentNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatusApplication" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatusApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatusApplicationData" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatusApplicationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationThaiSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicationThai" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationThaiSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicationThaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="BaseFormatMemberNoSoapIn">
+    <wsdl:part name="parameters" element="tns:BaseFormatMemberNo" />
+  </wsdl:message>
+  <wsdl:message name="BaseFormatMemberNoSoapOut">
+    <wsdl:part name="parameters" element="tns:BaseFormatMemberNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBranchId" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBranchIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyLogin" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPermissMenu" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPermissMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDDDWXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDDDWXml" />
+  </wsdl:message>
+  <wsdl:message name="GetDDDWXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDDDWXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrinterFormSets" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrinterFormSetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrinterFormSetsData" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrinterFormSetsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDefaultPrinterFormSets" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDefaultPrinterFormSetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsByIPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDefaultPrinterFormSetsByIP" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsByIPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDefaultPrinterFormSetsByIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetXmlDataStoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetXmlDataStore" />
+  </wsdl:message>
+  <wsdl:message name="GetXmlDataStoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetXmlDataStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTextDataStoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTextDataStore" />
+  </wsdl:message>
+  <wsdl:message name="GetTextDataStoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTextDataStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProcessStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProcessStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveProcess" />
+  </wsdl:message>
+  <wsdl:message name="RemoveProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadThaiBathSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadThaiBath" />
+  </wsdl:message>
+  <wsdl:message name="ReadThaiBathSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadThaiBathResponse" />
+  </wsdl:message>
+  <wsdl:message name="LastDayOfmonthSoapIn">
+    <wsdl:part name="parameters" element="tns:LastDayOfmonth" />
+  </wsdl:message>
+  <wsdl:message name="LastDayOfmonthSoapOut">
+    <wsdl:part name="parameters" element="tns:LastDayOfmonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathRegistrySoapIn">
+    <wsdl:part name="parameters" element="tns:zPhysicalPathRegistry" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathRegistrySoapOut">
+    <wsdl:part name="parameters" element="tns:zPhysicalPathRegistryResponse" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:zPhysicalPathXML" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:zPhysicalPathXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataWindowSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDataWindow" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataWindowSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDataWindowResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataWindowSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDataWindow" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataWindowSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDataWindowResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordServiceHttpGetIn" />
+  <wsdl:message name="GetPasswordServiceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionStringHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetConstantValueHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="param" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetConstantValueHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="keyWord" type="s:string" />
+    <wsdl:part name="tName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocNoHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="docCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocumentNoHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="docCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocumentNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationDataHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationThaiHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="app" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationThaiHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BaseFormatMemberNoHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="memberNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BaseFormatMemberNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchIdHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="csType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLoginHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="branchId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissMenuHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissMenuHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDDDWXmlHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="ddwobj" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDDDWXmlHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsDataHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsByIPHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="comIp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsByIPHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStatusHttpGetIn">
+    <wsdl:part name="wspass" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="w_sheet_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveProcessHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="w_sheet_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveProcessHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadThaiBathHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="number" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadThaiBathHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LastDayOfmonthHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LastDayOfmonthHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathRegistryHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathRegistryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathXMLHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataWindowHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="xmlData" type="s:string" />
+    <wsdl:part name="pblName" type="s:string" />
+    <wsdl:part name="table" type="s:string" />
+    <wsdl:part name="dwObjectName" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="rows" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataWindowHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataWindowHttpGetIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="xmlData" type="s:string" />
+    <wsdl:part name="pblName" type="s:string" />
+    <wsdl:part name="table" type="s:string" />
+    <wsdl:part name="dwObjectName" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="rows" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataWindowHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordServiceHttpPostIn" />
+  <wsdl:message name="GetPasswordServiceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionStringHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetConstantValueHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="param" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetConstantValueHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="keyWord" type="s:string" />
+    <wsdl:part name="tName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocNoHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="docCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocumentNoHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="docCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewDocumentNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationDataHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusApplicationDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationThaiHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="app" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationThaiHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BaseFormatMemberNoHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="memberNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BaseFormatMemberNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchIdHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="csType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLoginHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="branchId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissMenuHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissMenuHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDDDWXmlHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="ddwobj" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDDDWXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsDataHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrinterFormSetsDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsByIPHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="comIp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDefaultPrinterFormSetsByIPHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStatusHttpPostIn">
+    <wsdl:part name="wspass" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="w_sheet_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveProcessHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="w_sheet_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveProcessHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadThaiBathHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="number" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadThaiBathHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LastDayOfmonthHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LastDayOfmonthHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathRegistryHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathRegistryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathXMLHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="zPhysicalPathXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataWindowHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="xmlData" type="s:string" />
+    <wsdl:part name="pblName" type="s:string" />
+    <wsdl:part name="table" type="s:string" />
+    <wsdl:part name="dwObjectName" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="rows" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataWindowHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataWindowHttpPostIn">
+    <wsdl:part name="wsPass" type="s:string" />
+    <wsdl:part name="xmlData" type="s:string" />
+    <wsdl:part name="pblName" type="s:string" />
+    <wsdl:part name="table" type="s:string" />
+    <wsdl:part name="dwObjectName" type="s:string" />
+    <wsdl:part name="application" type="s:string" />
+    <wsdl:part name="rows" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataWindowHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="CommonSoap">
+    <wsdl:operation name="GetPasswordService">
+      <wsdl:input message="tns:GetPasswordServiceSoapIn" />
+      <wsdl:output message="tns:GetPasswordServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <wsdl:input message="tns:GetConnectionStringSoapIn" />
+      <wsdl:output message="tns:GetConnectionStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConstantValue">
+      <wsdl:input message="tns:GetConstantValueSoapIn" />
+      <wsdl:output message="tns:GetConstantValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <wsdl:input message="tns:GetDataTableSoapIn" />
+      <wsdl:output message="tns:GetDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocNo">
+      <wsdl:input message="tns:GetNewDocNoSoapIn" />
+      <wsdl:output message="tns:GetNewDocNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocumentNo">
+      <wsdl:input message="tns:GetNewDocumentNoSoapIn" />
+      <wsdl:output message="tns:GetNewDocumentNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplication">
+      <wsdl:input message="tns:GetStatusApplicationSoapIn" />
+      <wsdl:output message="tns:GetStatusApplicationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplicationData">
+      <wsdl:input message="tns:GetStatusApplicationDataSoapIn" />
+      <wsdl:output message="tns:GetStatusApplicationDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationThai">
+      <wsdl:input message="tns:GetApplicationThaiSoapIn" />
+      <wsdl:output message="tns:GetApplicationThaiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaseFormatMemberNo">
+      <wsdl:input message="tns:BaseFormatMemberNoSoapIn" />
+      <wsdl:output message="tns:BaseFormatMemberNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchId">
+      <wsdl:input message="tns:GetBranchIdSoapIn" />
+      <wsdl:output message="tns:GetBranchIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLogin">
+      <wsdl:input message="tns:VerifyLoginSoapIn" />
+      <wsdl:output message="tns:VerifyLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissMenu">
+      <wsdl:input message="tns:GetPermissMenuSoapIn" />
+      <wsdl:output message="tns:GetPermissMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDWXml">
+      <wsdl:input message="tns:GetDDDWXmlSoapIn" />
+      <wsdl:output message="tns:GetDDDWXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSets">
+      <wsdl:input message="tns:GetPrinterFormSetsSoapIn" />
+      <wsdl:output message="tns:GetPrinterFormSetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSetsData">
+      <wsdl:input message="tns:GetPrinterFormSetsDataSoapIn" />
+      <wsdl:output message="tns:GetPrinterFormSetsDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSets">
+      <wsdl:input message="tns:GetDefaultPrinterFormSetsSoapIn" />
+      <wsdl:output message="tns:GetDefaultPrinterFormSetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSetsByIP">
+      <wsdl:input message="tns:GetDefaultPrinterFormSetsByIPSoapIn" />
+      <wsdl:output message="tns:GetDefaultPrinterFormSetsByIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXmlDataStore">
+      <wsdl:input message="tns:GetXmlDataStoreSoapIn" />
+      <wsdl:output message="tns:GetXmlDataStoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTextDataStore">
+      <wsdl:input message="tns:GetTextDataStoreSoapIn" />
+      <wsdl:output message="tns:GetTextDataStoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <wsdl:input message="tns:GetProcessStatusSoapIn" />
+      <wsdl:output message="tns:GetProcessStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProcess">
+      <wsdl:input message="tns:RemoveProcessSoapIn" />
+      <wsdl:output message="tns:RemoveProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadThaiBath">
+      <wsdl:input message="tns:ReadThaiBathSoapIn" />
+      <wsdl:output message="tns:ReadThaiBathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LastDayOfmonth">
+      <wsdl:input message="tns:LastDayOfmonthSoapIn" />
+      <wsdl:output message="tns:LastDayOfmonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathRegistry">
+      <wsdl:input message="tns:zPhysicalPathRegistrySoapIn" />
+      <wsdl:output message="tns:zPhysicalPathRegistrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathXML">
+      <wsdl:input message="tns:zPhysicalPathXMLSoapIn" />
+      <wsdl:output message="tns:zPhysicalPathXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataWindow">
+      <wsdl:input message="tns:InsertDataWindowSoapIn" />
+      <wsdl:output message="tns:InsertDataWindowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataWindow">
+      <wsdl:input message="tns:UpdateDataWindowSoapIn" />
+      <wsdl:output message="tns:UpdateDataWindowSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CommonHttpGet">
+    <wsdl:operation name="GetPasswordService">
+      <wsdl:input message="tns:GetPasswordServiceHttpGetIn" />
+      <wsdl:output message="tns:GetPasswordServiceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <wsdl:input message="tns:GetConnectionStringHttpGetIn" />
+      <wsdl:output message="tns:GetConnectionStringHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConstantValue">
+      <wsdl:input message="tns:GetConstantValueHttpGetIn" />
+      <wsdl:output message="tns:GetConstantValueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <wsdl:input message="tns:GetDataTableHttpGetIn" />
+      <wsdl:output message="tns:GetDataTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocNo">
+      <wsdl:input message="tns:GetNewDocNoHttpGetIn" />
+      <wsdl:output message="tns:GetNewDocNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocumentNo">
+      <wsdl:input message="tns:GetNewDocumentNoHttpGetIn" />
+      <wsdl:output message="tns:GetNewDocumentNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplication">
+      <wsdl:input message="tns:GetStatusApplicationHttpGetIn" />
+      <wsdl:output message="tns:GetStatusApplicationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplicationData">
+      <wsdl:input message="tns:GetStatusApplicationDataHttpGetIn" />
+      <wsdl:output message="tns:GetStatusApplicationDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationThai">
+      <wsdl:input message="tns:GetApplicationThaiHttpGetIn" />
+      <wsdl:output message="tns:GetApplicationThaiHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaseFormatMemberNo">
+      <wsdl:input message="tns:BaseFormatMemberNoHttpGetIn" />
+      <wsdl:output message="tns:BaseFormatMemberNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchId">
+      <wsdl:input message="tns:GetBranchIdHttpGetIn" />
+      <wsdl:output message="tns:GetBranchIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLogin">
+      <wsdl:input message="tns:VerifyLoginHttpGetIn" />
+      <wsdl:output message="tns:VerifyLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissMenu">
+      <wsdl:input message="tns:GetPermissMenuHttpGetIn" />
+      <wsdl:output message="tns:GetPermissMenuHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDWXml">
+      <wsdl:input message="tns:GetDDDWXmlHttpGetIn" />
+      <wsdl:output message="tns:GetDDDWXmlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSets">
+      <wsdl:input message="tns:GetPrinterFormSetsHttpGetIn" />
+      <wsdl:output message="tns:GetPrinterFormSetsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSetsData">
+      <wsdl:input message="tns:GetPrinterFormSetsDataHttpGetIn" />
+      <wsdl:output message="tns:GetPrinterFormSetsDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSets">
+      <wsdl:input message="tns:GetDefaultPrinterFormSetsHttpGetIn" />
+      <wsdl:output message="tns:GetDefaultPrinterFormSetsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSetsByIP">
+      <wsdl:input message="tns:GetDefaultPrinterFormSetsByIPHttpGetIn" />
+      <wsdl:output message="tns:GetDefaultPrinterFormSetsByIPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <wsdl:input message="tns:GetProcessStatusHttpGetIn" />
+      <wsdl:output message="tns:GetProcessStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProcess">
+      <wsdl:input message="tns:RemoveProcessHttpGetIn" />
+      <wsdl:output message="tns:RemoveProcessHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadThaiBath">
+      <wsdl:input message="tns:ReadThaiBathHttpGetIn" />
+      <wsdl:output message="tns:ReadThaiBathHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LastDayOfmonth">
+      <wsdl:input message="tns:LastDayOfmonthHttpGetIn" />
+      <wsdl:output message="tns:LastDayOfmonthHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathRegistry">
+      <wsdl:input message="tns:zPhysicalPathRegistryHttpGetIn" />
+      <wsdl:output message="tns:zPhysicalPathRegistryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathXML">
+      <wsdl:input message="tns:zPhysicalPathXMLHttpGetIn" />
+      <wsdl:output message="tns:zPhysicalPathXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataWindow">
+      <wsdl:input message="tns:InsertDataWindowHttpGetIn" />
+      <wsdl:output message="tns:InsertDataWindowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataWindow">
+      <wsdl:input message="tns:UpdateDataWindowHttpGetIn" />
+      <wsdl:output message="tns:UpdateDataWindowHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CommonHttpPost">
+    <wsdl:operation name="GetPasswordService">
+      <wsdl:input message="tns:GetPasswordServiceHttpPostIn" />
+      <wsdl:output message="tns:GetPasswordServiceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <wsdl:input message="tns:GetConnectionStringHttpPostIn" />
+      <wsdl:output message="tns:GetConnectionStringHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConstantValue">
+      <wsdl:input message="tns:GetConstantValueHttpPostIn" />
+      <wsdl:output message="tns:GetConstantValueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <wsdl:input message="tns:GetDataTableHttpPostIn" />
+      <wsdl:output message="tns:GetDataTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocNo">
+      <wsdl:input message="tns:GetNewDocNoHttpPostIn" />
+      <wsdl:output message="tns:GetNewDocNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocumentNo">
+      <wsdl:input message="tns:GetNewDocumentNoHttpPostIn" />
+      <wsdl:output message="tns:GetNewDocumentNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplication">
+      <wsdl:input message="tns:GetStatusApplicationHttpPostIn" />
+      <wsdl:output message="tns:GetStatusApplicationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplicationData">
+      <wsdl:input message="tns:GetStatusApplicationDataHttpPostIn" />
+      <wsdl:output message="tns:GetStatusApplicationDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationThai">
+      <wsdl:input message="tns:GetApplicationThaiHttpPostIn" />
+      <wsdl:output message="tns:GetApplicationThaiHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaseFormatMemberNo">
+      <wsdl:input message="tns:BaseFormatMemberNoHttpPostIn" />
+      <wsdl:output message="tns:BaseFormatMemberNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchId">
+      <wsdl:input message="tns:GetBranchIdHttpPostIn" />
+      <wsdl:output message="tns:GetBranchIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLogin">
+      <wsdl:input message="tns:VerifyLoginHttpPostIn" />
+      <wsdl:output message="tns:VerifyLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissMenu">
+      <wsdl:input message="tns:GetPermissMenuHttpPostIn" />
+      <wsdl:output message="tns:GetPermissMenuHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDWXml">
+      <wsdl:input message="tns:GetDDDWXmlHttpPostIn" />
+      <wsdl:output message="tns:GetDDDWXmlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSets">
+      <wsdl:input message="tns:GetPrinterFormSetsHttpPostIn" />
+      <wsdl:output message="tns:GetPrinterFormSetsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSetsData">
+      <wsdl:input message="tns:GetPrinterFormSetsDataHttpPostIn" />
+      <wsdl:output message="tns:GetPrinterFormSetsDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSets">
+      <wsdl:input message="tns:GetDefaultPrinterFormSetsHttpPostIn" />
+      <wsdl:output message="tns:GetDefaultPrinterFormSetsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSetsByIP">
+      <wsdl:input message="tns:GetDefaultPrinterFormSetsByIPHttpPostIn" />
+      <wsdl:output message="tns:GetDefaultPrinterFormSetsByIPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <wsdl:input message="tns:GetProcessStatusHttpPostIn" />
+      <wsdl:output message="tns:GetProcessStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProcess">
+      <wsdl:input message="tns:RemoveProcessHttpPostIn" />
+      <wsdl:output message="tns:RemoveProcessHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadThaiBath">
+      <wsdl:input message="tns:ReadThaiBathHttpPostIn" />
+      <wsdl:output message="tns:ReadThaiBathHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LastDayOfmonth">
+      <wsdl:input message="tns:LastDayOfmonthHttpPostIn" />
+      <wsdl:output message="tns:LastDayOfmonthHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathRegistry">
+      <wsdl:input message="tns:zPhysicalPathRegistryHttpPostIn" />
+      <wsdl:output message="tns:zPhysicalPathRegistryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathXML">
+      <wsdl:input message="tns:zPhysicalPathXMLHttpPostIn" />
+      <wsdl:output message="tns:zPhysicalPathXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataWindow">
+      <wsdl:input message="tns:InsertDataWindowHttpPostIn" />
+      <wsdl:output message="tns:InsertDataWindowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataWindow">
+      <wsdl:input message="tns:UpdateDataWindowHttpPostIn" />
+      <wsdl:output message="tns:UpdateDataWindowHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CommonSoap" type="tns:CommonSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPasswordService">
+      <soap:operation soapAction="http://isocare.org/GetPasswordService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <soap:operation soapAction="http://isocare.org/GetConnectionString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConstantValue">
+      <soap:operation soapAction="http://isocare.org/GetConstantValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <soap:operation soapAction="http://isocare.org/GetDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocNo">
+      <soap:operation soapAction="http://isocare.org/GetNewDocNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocumentNo">
+      <soap:operation soapAction="http://isocare.org/GetNewDocumentNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplication">
+      <soap:operation soapAction="http://isocare.org/GetStatusApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplicationData">
+      <soap:operation soapAction="http://isocare.org/GetStatusApplicationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationThai">
+      <soap:operation soapAction="http://isocare.org/GetApplicationThai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaseFormatMemberNo">
+      <soap:operation soapAction="http://isocare.org/BaseFormatMemberNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchId">
+      <soap:operation soapAction="http://isocare.org/GetBranchId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLogin">
+      <soap:operation soapAction="http://isocare.org/VerifyLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissMenu">
+      <soap:operation soapAction="http://isocare.org/GetPermissMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDWXml">
+      <soap:operation soapAction="http://isocare.org/GetDDDWXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSets">
+      <soap:operation soapAction="http://isocare.org/GetPrinterFormSets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSetsData">
+      <soap:operation soapAction="http://isocare.org/GetPrinterFormSetsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSets">
+      <soap:operation soapAction="http://isocare.org/GetDefaultPrinterFormSets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSetsByIP">
+      <soap:operation soapAction="http://isocare.org/GetDefaultPrinterFormSetsByIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXmlDataStore">
+      <soap:operation soapAction="http://isocare.org/GetXmlDataStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTextDataStore">
+      <soap:operation soapAction="http://isocare.org/GetTextDataStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <soap:operation soapAction="http://isocare.org/GetProcessStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProcess">
+      <soap:operation soapAction="http://isocare.org/RemoveProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadThaiBath">
+      <soap:operation soapAction="http://isocare.org/ReadThaiBath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastDayOfmonth">
+      <soap:operation soapAction="http://isocare.org/LastDayOfmonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathRegistry">
+      <soap:operation soapAction="http://isocare.org/zPhysicalPathRegistry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathXML">
+      <soap:operation soapAction="http://isocare.org/zPhysicalPathXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataWindow">
+      <soap:operation soapAction="http://isocare.org/InsertDataWindow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataWindow">
+      <soap:operation soapAction="http://isocare.org/UpdateDataWindow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommonSoap12" type="tns:CommonSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPasswordService">
+      <soap12:operation soapAction="http://isocare.org/GetPasswordService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <soap12:operation soapAction="http://isocare.org/GetConnectionString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConstantValue">
+      <soap12:operation soapAction="http://isocare.org/GetConstantValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <soap12:operation soapAction="http://isocare.org/GetDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocNo">
+      <soap12:operation soapAction="http://isocare.org/GetNewDocNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocumentNo">
+      <soap12:operation soapAction="http://isocare.org/GetNewDocumentNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplication">
+      <soap12:operation soapAction="http://isocare.org/GetStatusApplication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplicationData">
+      <soap12:operation soapAction="http://isocare.org/GetStatusApplicationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationThai">
+      <soap12:operation soapAction="http://isocare.org/GetApplicationThai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaseFormatMemberNo">
+      <soap12:operation soapAction="http://isocare.org/BaseFormatMemberNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchId">
+      <soap12:operation soapAction="http://isocare.org/GetBranchId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLogin">
+      <soap12:operation soapAction="http://isocare.org/VerifyLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissMenu">
+      <soap12:operation soapAction="http://isocare.org/GetPermissMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDWXml">
+      <soap12:operation soapAction="http://isocare.org/GetDDDWXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSets">
+      <soap12:operation soapAction="http://isocare.org/GetPrinterFormSets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSetsData">
+      <soap12:operation soapAction="http://isocare.org/GetPrinterFormSetsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSets">
+      <soap12:operation soapAction="http://isocare.org/GetDefaultPrinterFormSets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSetsByIP">
+      <soap12:operation soapAction="http://isocare.org/GetDefaultPrinterFormSetsByIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXmlDataStore">
+      <soap12:operation soapAction="http://isocare.org/GetXmlDataStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTextDataStore">
+      <soap12:operation soapAction="http://isocare.org/GetTextDataStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <soap12:operation soapAction="http://isocare.org/GetProcessStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProcess">
+      <soap12:operation soapAction="http://isocare.org/RemoveProcess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadThaiBath">
+      <soap12:operation soapAction="http://isocare.org/ReadThaiBath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastDayOfmonth">
+      <soap12:operation soapAction="http://isocare.org/LastDayOfmonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathRegistry">
+      <soap12:operation soapAction="http://isocare.org/zPhysicalPathRegistry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathXML">
+      <soap12:operation soapAction="http://isocare.org/zPhysicalPathXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataWindow">
+      <soap12:operation soapAction="http://isocare.org/InsertDataWindow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataWindow">
+      <soap12:operation soapAction="http://isocare.org/UpdateDataWindow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommonHttpGet" type="tns:CommonHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetPasswordService">
+      <http:operation location="/GetPasswordService" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <http:operation location="/GetConnectionString" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConstantValue">
+      <http:operation location="/GetConstantValue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <http:operation location="/GetDataTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocNo">
+      <http:operation location="/GetNewDocNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocumentNo">
+      <http:operation location="/GetNewDocumentNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplication">
+      <http:operation location="/GetStatusApplication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplicationData">
+      <http:operation location="/GetStatusApplicationData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationThai">
+      <http:operation location="/GetApplicationThai" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaseFormatMemberNo">
+      <http:operation location="/BaseFormatMemberNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchId">
+      <http:operation location="/GetBranchId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLogin">
+      <http:operation location="/VerifyLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissMenu">
+      <http:operation location="/GetPermissMenu" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDWXml">
+      <http:operation location="/GetDDDWXml" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSets">
+      <http:operation location="/GetPrinterFormSets" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSetsData">
+      <http:operation location="/GetPrinterFormSetsData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSets">
+      <http:operation location="/GetDefaultPrinterFormSets" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSetsByIP">
+      <http:operation location="/GetDefaultPrinterFormSetsByIP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <http:operation location="/GetProcessStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProcess">
+      <http:operation location="/RemoveProcess" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadThaiBath">
+      <http:operation location="/ReadThaiBath" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastDayOfmonth">
+      <http:operation location="/LastDayOfmonth" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathRegistry">
+      <http:operation location="/zPhysicalPathRegistry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathXML">
+      <http:operation location="/zPhysicalPathXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataWindow">
+      <http:operation location="/InsertDataWindow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataWindow">
+      <http:operation location="/UpdateDataWindow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommonHttpPost" type="tns:CommonHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetPasswordService">
+      <http:operation location="/GetPasswordService" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <http:operation location="/GetConnectionString" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConstantValue">
+      <http:operation location="/GetConstantValue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <http:operation location="/GetDataTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocNo">
+      <http:operation location="/GetNewDocNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewDocumentNo">
+      <http:operation location="/GetNewDocumentNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplication">
+      <http:operation location="/GetStatusApplication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusApplicationData">
+      <http:operation location="/GetStatusApplicationData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationThai">
+      <http:operation location="/GetApplicationThai" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaseFormatMemberNo">
+      <http:operation location="/BaseFormatMemberNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchId">
+      <http:operation location="/GetBranchId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLogin">
+      <http:operation location="/VerifyLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissMenu">
+      <http:operation location="/GetPermissMenu" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDWXml">
+      <http:operation location="/GetDDDWXml" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSets">
+      <http:operation location="/GetPrinterFormSets" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrinterFormSetsData">
+      <http:operation location="/GetPrinterFormSetsData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSets">
+      <http:operation location="/GetDefaultPrinterFormSets" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultPrinterFormSetsByIP">
+      <http:operation location="/GetDefaultPrinterFormSetsByIP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <http:operation location="/GetProcessStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProcess">
+      <http:operation location="/RemoveProcess" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadThaiBath">
+      <http:operation location="/ReadThaiBath" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastDayOfmonth">
+      <http:operation location="/LastDayOfmonth" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathRegistry">
+      <http:operation location="/zPhysicalPathRegistry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zPhysicalPathXML">
+      <http:operation location="/zPhysicalPathXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataWindow">
+      <http:operation location="/InsertDataWindow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataWindow">
+      <http:operation location="/UpdateDataWindow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Common">
+    <wsdl:port name="CommonSoap" binding="tns:CommonSoap">
+      <soap:address location="http://localhost/FSCT/GCOOP/WebService/Common.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommonSoap12" binding="tns:CommonSoap12">
+      <soap12:address location="http://localhost/FSCT/GCOOP/WebService/Common.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommonHttpGet" binding="tns:CommonHttpGet">
+      <http:address location="http://localhost/FSCT/GCOOP/WebService/Common.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommonHttpPost" binding="tns:CommonHttpPost">
+      <http:address location="http://localhost/FSCT/GCOOP/WebService/Common.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

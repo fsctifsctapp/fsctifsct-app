@@ -1,0 +1,5 @@
+C:\GCOOP\Security\obj\Debug\ResolveAssemblyReference.cache
+C:\GCOOP\Security\bin\Debug\Security.dll
+C:\GCOOP\Security\bin\Debug\Security.pdb
+C:\GCOOP\Security\obj\Debug\Security.dll
+C:\GCOOP\Security\obj\Debug\Security.pdb

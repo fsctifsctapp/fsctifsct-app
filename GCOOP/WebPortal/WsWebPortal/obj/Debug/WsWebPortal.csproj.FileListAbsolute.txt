@@ -1,0 +1,10 @@
+D:\GCOOP\WebPortal\WsWebPortal\obj\Debug\ResolveAssemblyReference.cache
+D:\GCOOP\WebPortal\WsWebPortal\bin\WsWebPortal.dll
+D:\GCOOP\WebPortal\WsWebPortal\bin\WsWebPortal.pdb
+D:\GCOOP\WebPortal\WsWebPortal\bin\DBAccess.dll
+D:\GCOOP\WebPortal\WsWebPortal\bin\DBAccess.pdb
+D:\GCOOP\WebPortal\WsWebPortal\obj\Debug\WsWebPortal.dll
+D:\GCOOP\WebPortal\WsWebPortal\obj\Debug\WsWebPortal.pdb
+D:\GCOOP\WebPortal\WsWebPortal\bin\DataWindow.dll
+D:\GCOOP\WebPortal\WsWebPortal\bin\DataWindowInterop.dll
+D:\GCOOP\WebPortal\WsWebPortal\bin\DataWindow.xml

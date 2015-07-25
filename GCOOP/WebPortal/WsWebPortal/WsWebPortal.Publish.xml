@@ -1,0 +1,24 @@
+<publishData>
+  <publishTarget publishUrl="C:\www\GCOOP\WsWebPortal\">
+    <file relUrl="bin/DBAccess.dll" publishTime="08/09/2010 19:20:44" />
+    <file relUrl="bin/DataWindowInterop.dll" publishTime="08/03/2007 10:19:06" />
+    <file relUrl="bin/WsWebPortal.pdb" publishTime="08/11/2010 16:36:54" />
+    <file relUrl="Web.config" publishTime="08/11/2010 16:47:04" />
+    <file relUrl="WptService.asmx" publishTime="07/31/2010 12:24:29" />
+    <file relUrl="bin/DataWindow.xml" publishTime="07/25/2007 16:03:22" />
+    <file relUrl="bin/WsWebPortal.dll" publishTime="08/11/2010 16:36:54" />
+    <file relUrl="bin/DBAccess.pdb" publishTime="08/09/2010 19:20:44" />
+    <file relUrl="bin/DataWindow.dll" publishTime="08/03/2007 10:19:04" />
+  </publishTarget>
+  <publishTarget publishUrl="C:\www\WsWebPortal\">
+    <file relUrl="bin/DBAccess.dll" publishTime="07/29/2010 11:13:39" />
+    <file relUrl="bin/DataWindowInterop.dll" publishTime="08/03/2007 10:19:06" />
+    <file relUrl="bin/WsWebPortal.pdb" publishTime="07/31/2010 18:13:26" />
+    <file relUrl="Web.config" publishTime="07/30/2010 11:18:45" />
+    <file relUrl="WptService.asmx" publishTime="07/31/2010 12:24:29" />
+    <file relUrl="bin/DataWindow.xml" publishTime="07/25/2007 16:03:22" />
+    <file relUrl="bin/WsWebPortal.dll" publishTime="07/31/2010 18:13:26" />
+    <file relUrl="bin/DBAccess.pdb" publishTime="07/29/2010 11:13:39" />
+    <file relUrl="bin/DataWindow.dll" publishTime="08/03/2007 10:19:04" />
+  </publishTarget>
+</publishData>

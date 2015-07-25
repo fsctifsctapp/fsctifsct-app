@@ -1,0 +1,23 @@
+Microsoft (R) Visual C# 2008 Compiler version 3.5.30729.5420
+for Microsoft (R) .NET Framework version 3.5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+commonservice.pbl_n_cst_globalvar_wrapper.cs(6,31): warning CS0108: 'pbreport.n_cst_globalvar.__nvo__' hides inherited member 'pbreport.n_cst_base.__nvo__'. Use the new keyword if hiding was intended.
+commonservice.pbl_n_cst_base_wrapper.cs(6,26): (Location of symbol related to previous warning)
+reportservice.pbl_n_cst_reportservice_wrapper.cs(6,35): warning CS0108: 'pbreport.n_cst_reportservice.__nvo__' hides inherited member 'pbreport.n_cst_base.__nvo__'. Use the new keyword if hiding was intended.
+commonservice.pbl_n_cst_base_wrapper.cs(6,26): (Location of symbol related to previous warning)
+reportservice.pbl_n_cst_rptcreator_default_wrapper.cs(6,40): warning CS0108: 'pbreport.n_cst_rptcreator_default.__nvo__' hides inherited member 'pbreport.n_cst_rptcreator_base.__nvo__'. Use the new keyword if hiding was intended.
+reportservice.pbl_n_cst_rptcreator_base_wrapper.cs(6,37): (Location of symbol related to previous warning)
+xmlconfservice.pbl_n_cst_datawindowxmlrow_wrapper.cs(6,38): warning CS0108: 'pbreport.n_cst_datawindowxmlrow.__nvo__' hides inherited member 'pbreport.n_cst_base.__nvo__'. Use the new keyword if hiding was intended.
+commonservice.pbl_n_cst_base_wrapper.cs(6,26): (Location of symbol related to previous warning)
+xmlconfservice.pbl_n_cst_datawindowxml_wrapper.cs(6,35): warning CS0108: 'pbreport.n_cst_datawindowxml.__nvo__' hides inherited member 'pbreport.n_cst_base.__nvo__'. Use the new keyword if hiding was intended.
+commonservice.pbl_n_cst_base_wrapper.cs(6,26): (Location of symbol related to previous warning)
+xmlconfservice.pbl_n_cst_xmlconfig_wrapper.cs(6,31): warning CS0108: 'pbreport.n_cst_xmlconfig.__nvo__' hides inherited member 'pbreport.n_cst_base.__nvo__'. Use the new keyword if hiding was intended.
+commonservice.pbl_n_cst_base_wrapper.cs(6,26): (Location of symbol related to previous warning)
+xmlconfservice.pbl_n_cst_xml_wrapper.cs(6,25): warning CS0108: 'pbreport.n_cst_xml.__nvo__' hides inherited member 'pbreport.n_cst_base.__nvo__'. Use the new keyword if hiding was intended.
+commonservice.pbl_n_cst_base_wrapper.cs(6,26): (Location of symbol related to previous warning)
+n_cst_account_service.of_sum_foradd_profit(IIS)(13,11): warning CS0219: The variable 'lds_sumledgerperiod' is assigned but its value is never used
+n_cst_account_service.of_sum_foradd_profit(IIS)(58,3): warning CS0162: Unreachable code detected
+n_cst_account_service.of_gen_ledger_report(SWWSSS)(51,11): warning CS0219: The variable 'lds_accsumdate' is assigned but its value is never used
+n_cst_rptcreator_bg_bfclose_month.report_retrieve(23,11): warning CS0219: The variable 'lds_criteria' is assigned but its value is never used
+n_cst_rptcreator_bg_movmonth.report_retrieve(23,11): warning CS0219: The variable 'lds_criteria' is assigned but its value is never used

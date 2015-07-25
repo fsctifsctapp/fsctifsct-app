@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/FSCT/GCOOP/WebService/Common.asmx?wsdl" docRef="http://localhost/FSCT/GCOOP/WebService/Common.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/FSCT/GCOOP/WebService/Common.asmx" xmlns:q1="http://isocare.org/" binding="q1:CommonSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/FSCT/GCOOP/WebService/Common.asmx" xmlns:q2="http://isocare.org/" binding="q2:CommonSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

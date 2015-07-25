@@ -1,0 +1,167 @@
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if "" == "" set NET_FRAMEWORK120=C:\Windows\Microsoft.NET\Framework\v3.5 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>C:\Windows\Microsoft.NET\Framework\v3.5\csc
+Microsoft (R) Visual C# 2008 Compiler version 3.5.30729.4926
+for Microsoft (R) .NET Framework version 3.5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+fatal error CS2008: No inputs specified
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if errorlevel 9009 exit 3 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>setlocal
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if exist "D:\GCOOP\PBService\accountservice\pb2csdotnettempout\*.cs" del "D:\GCOOP\PBService\accountservice\pb2csdotnettempout\*.cs" 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>rename "D:\GCOOP\PBService\accountservice\pb2csdotnettempout\AssemblyInfo.bak" "AssemblyInfo.cs" 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>"C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\pb2cs" @"D:\GCOOP\PBService\accountservice\pb2csdotnettempout\projectinfo.txt" 
+n_cst_account_service,n_cst_account_service,of_add_new_accountid:IS,of_add_new_accountid,,of_add_new_updatevoucher:ISSS,of_add_new_updatevoucher,,of_cancel_close_month:IIIS,of_cancel_close_month,,of_cancel_post_to_gl:ISSSW,of_cancel_post_to_gl,,of_close_month:IIIS,of_close_month,,of_delete_account_id:II,of_delete_account_id,,of_err_generate_import_xml:SI,of_err_generate_import_xml,,of_gen_balance_sheet:ISSSRS,of_gen_balance_sheet,,of_gen_trial_bs:IWWISRS,of_gen_trial_bs,,of_get_account_group:SS,of_get_account_group,,of_get_balance_begin:MSIIS,of_get_balance_begin,,of_get_balance_begin:MSWS,of_get_balance_begin,,of_get_bs_det:MIS,of_get_bs_det,,of_get_bs_sum:MIS,of_get_bs_sum,,of_get_cash_bg_fw:IWSRMRM,of_get_cash_bg_fw,,of_get_list_vcmas_det:ISRSRS,of_get_list_vcmas_det,,of_get_period_date:IIIRWRW,of_get_period_date,,of_get_sum_between_cr:QWWSRM,of_get_sum_between_cr,,of_get_sum_between_dr:QWWSRM,of_get_sum_between_dr,,of_get_sum_between_drcr:QWWSRMRM,of_get_sum_between_drcr,,of_get_sum_between_drcr:QWWSRMRMI,of_get_sum_between_drcr,,of_get_sum_between_drcr:QWWSSRMRM,of_get_sum_between_drcr,,of_get_sum_between_drcr:QWWSSRMRMI,of_get_sum_between_drcr,,of_get_sum_between_drcr_adj:QWWSRMRM,of_get_sum_between_drcr_adj,,of_get_sum_between_drcr_adj:QWWSSRMRM,of_get_sum_between_drcr_adj,,of_get_sum_between_notpost_drcr:QWWSSRMRM,of_get_sum_between_notpost_drcr,,of_get_sum_drcr:QWSRMRM,of_get_sum_drcr,,of_get_sum_drcr:QWWSRMRM,of_get_sum_drcr,,of_get_sum_drcr:QWWSRMRMI,of_get_sum_drcr,,of_get_sum_drcr:QWWSSRMRM,of_get_sum_drcr,,of_get_sum_drcr:QWWSSRMRMI,of_get_sum_drcr,,of_get_sum_drcr_booktype:QWIRMRM,of_get_sum_drcr_booktype,,of_get_sum_notpost_drcr:QWWSSRMRM,of_get_sum_notpost_drcr,,of_get_vclist_day:IWSRS,of_get_vclist_day,,of_get_vclist_nopost:IWWSS,of_get_vclist_nopost,,of_get_year_period:IIIRIRI,of_get_year_period,,of_get_year_period:IWRIRI,of_get_year_period,,of_init:ICn_cst_dbconnectservice.S,of_init,,of_is_headquater:IS,of_is_headquater,,of_isexits_sumledger:ISIIS,of_isexits_sumledger,,of_new_voucher_no:ISSWRS,of_new_voucher_no,,of_post_to_gl:ISSS,of_post_to_gl,,of_post_to_sumledger:ISIIIMMS,of_post_to_sumledger,,of_set_contmoney:ISIIRM,of_set_contmoney,,of_set_default_accountid:IS,of_set_default_accountid,,of_show_bs:ISIISSI,of_show_bs,,of_start_gen_finances_stm:ISWWSI,of_start_gen_finances_stm,,
+n_cst_dbconnectservice,n_cst_dbconnectservice,of_connectdb:I,of_connectdb,,of_connectdb:IS,of_connectdb,,of_disconnectdb:I,of_disconnectdb,,
+Type-checking (pass 1) system (system)
+Parsing d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Parsing d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Parsing d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Parsing d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Parsing d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Parsing d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Parsing d:\gcoop\pbservice\accountservice\accountservice.pbl (n_accountservice)
+Parsing d:\gcoop\pbservice\accountservice\accountservice.pbl (accountservice)
+Parsing d:\gcoop\pbservice\accountservice\accountservice.pbl (n_cst_account_service)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (accountservice)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (n_accountservice)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (n_cst_account_service)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (accountservice)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (n_accountservice)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (n_cst_account_service)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (accountservice)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (n_accountservice)
+Type-checking (pass 1) d:\gcoop\pbservice\accountservice\accountservice.pbl (n_cst_account_service)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking (pass 1) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking prototypes/instance variables(pass 2) 
+Type-checking methods(pass 2) d:\gcoop\pbservice\accountservice\accountservice.pbl (accountservice)
+Type-checking methods(pass 2) d:\gcoop\pbservice\accountservice\accountservice.pbl (n_accountservice)
+Type-checking methods(pass 2) d:\gcoop\pbservice\accountservice\accountservice.pbl (n_cst_account_service)
+Type-checking methods(pass 2) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_bankservice)
+Type-checking methods(pass 2) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Type-checking methods(pass 2) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Type-checking methods(pass 2) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Type-checking methods(pass 2) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Type-checking methods(pass 2) d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting d:\gcoop\pbservice\accountservice\accountservice.pbl (accountservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Emitting d:\gcoop\pbservice\accountservice\accountservice.pbl (n_cst_account_service)
+Emitting d:\gcoop\pbservice\accountservice\accountservice.pbl (accountservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Emitting d:\gcoop\pbservice\accountservice\accountservice.pbl (n_cst_account_service)
+Emitting d:\gcoop\pbservice\accountservice\accountservice.pbl (accountservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_doccontrolservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice_web)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_datetimeservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_stringservice)
+Emitting d:\gcoop\pbservice\commonservice\commonservice.pbl (n_cst_dbconnectservice)
+Emitting d:\gcoop\pbservice\accountservice\accountservice.pbl (n_cst_account_service)
+
+
+Error Summary : 0 error(s) 
+
+
+
+Warning Summary : 0 warning(s) 
+
+
+
+Compile complete -- 0 error(s), 0 warning(s)
+
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if ERRORLEVEL 1 exit 1 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>call build.bat c- "D:\GCOOP\PBService\accountservice\pb2csdotnettempout\csc_output_file_name.txt" 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>setlocal
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if "c-" == "" goto usage  
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if "C:\Program Files\Sybase\PowerBuilder 12.0\DotNET" == "" goto sethome 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if "" == "" set NET_FRAMEWORK_PB$PBVERSION$=C:\Windows\Microsoft.NET\Framework\v3.5 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>md bin 
+A subdirectory or file bin already exists.
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>md install 
+A subdirectory or file install already exists.
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if "c-" == "c-" goto notcopy 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>reg import "C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\PBExceptionTrace.reg" 
+The operation completed successfully.
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>xcopy /D /Y "d:\gcoop\pbservice\commonservice\commonservice.pbd" bin\ 
+0 File(s) copied
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>xcopy /D /Y "d:\gcoop\pbservice\commonservice\commonservice.pbd" install\ 
+0 File(s) copied
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>xcopy /D /Y "d:\gcoop\pbservice\accountservice\accountservice.pbd" bin\ 
+D:\gcoop\pbservice\accountservice\accountservice.pbd
+1 File(s) copied
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>xcopy /D /Y "d:\gcoop\pbservice\accountservice\accountservice.pbd" install\ 
+D:\gcoop\pbservice\accountservice\accountservice.pbd
+1 File(s) copied
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if "D:\GCOOP\PBService\accountservice\pb2csdotnettempout\csc_output_file_name.txt" == "" (C:\Windows\Microsoft.NET\Framework\v3.5\csc /t:library /debug /nowarn:1591 /doc:"bin\pbservice.accountservice.xml"   /platform:x86  /linkres:bin\commonservice.pbd /linkres:bin\accountservice.pbd "/r:C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Core.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Interop.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Common.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Win.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.WinWebDataWindowCommon.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.ejb.net.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.iiop.net.dll" /out:"bin\pbservice.accountservice.dll" *.cs )  else (C:\Windows\Microsoft.NET\Framework\v3.5\csc /t:library /debug /nowarn:1591 /doc:"bin\pbservice.accountservice.xml"   /platform:x86  /linkres:bin\commonservice.pbd /linkres:bin\accountservice.pbd "/r:C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Core.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Interop.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Common.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.Win.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\Sybase.PowerBuilder.WinWebDataWindowCommon.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.ejb.net.dll;C:\Program Files\Sybase\PowerBuilder 12.0\DotNET\bin\com.sybase.iiop.net.dll" /out:"bin\pbservice.accountservice.dll" *.cs  1>"D:\GCOOP\PBService\accountservice\pb2csdotnettempout\csc_output_file_name.txt" ) 
+Build Succeeded.
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>goto end 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>xcopy /D /Y "bin\pbservice.accountservice.dll" install\ 
+bin\pbservice.accountservice.dll
+1 File(s) copied
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>endlocal
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if ERRORLEVEL 1 exit 2 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>if exist "D:\GCOOP\PBService\accountservice\pb2csdotnettempout\*.cs" del "D:\GCOOP\PBService\accountservice\pb2csdotnettempout\*.cs" 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>goto end 
+
+D:\GCOOP\PBService\accountservice\pb2csdotnettempout>endlocal
+Generating PowerBuilder .NET assemblies succeeded.
+Warning: Cannot copy the log.txt file to the output directory.

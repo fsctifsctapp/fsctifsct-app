@@ -1,0 +1,437 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{154A2A15-C940-4237-99F4-831F09F72818}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebPortal</RootNamespace>
+    <AssemblyName>WebPortal</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.Web\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindow, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Sybase\DataWindow .NET 2.5\DataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="DataWindowInterop, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Sybase\DataWindow .NET 2.5\DataWindowInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.DataWindow.WebService.Runtime, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataWindow\Sybase.DataWindow.WebService.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.DataWindow.WebService.RuntimeRemoteLoader, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataWindow\Sybase.DataWindow.WebService.RuntimeRemoteLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.DataWindow.WebService.WSDL, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataWindow\Sybase.DataWindow.WebService.WSDL.dll</HintPath>
+    </Reference>
+    <Reference Include="Sybase.DataWindow.WebService.WSDLRemoteLoader, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataWindow\Sybase.DataWindow.WebService.WSDLRemoteLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="WebDataWindow, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Sybase\DataWindow .NET 2.5\WebDataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="WptService, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataWindow\WptService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\layout2_setup.css" />
+    <Content Include="css\layout2_text.css" />
+    <Content Include="css\layout_page.css" />
+    <Content Include="css\layout_text.css" />
+    <Content Include="img\bg_bullet_arrow.gif" />
+    <Content Include="img\bg_bullet_full_1.gif" />
+    <Content Include="img\bg_bullet_full_2.gif" />
+    <Content Include="img\bg_bullet_half_1.gif" />
+    <Content Include="img\bg_bullet_half_2.gif" />
+    <Content Include="img\bg_corner_topleft.gif" />
+    <Content Include="img\bg_corner_topright.gif" />
+    <Content Include="img\bg_foot.jpg" />
+    <Content Include="img\bg_head_bottom_nav.jpg" />
+    <Content Include="img\bg_head_bottom_nav_hover.gif" />
+    <Content Include="img\bg_head_breadcrumbs.jpg" />
+    <Content Include="img\bg_head_middle.jpg" />
+    <Content Include="img\bg_head_top.jpg" />
+    <Content Include="img\bg_head_top_logo.jpg" />
+    <Content Include="img\bg_main_withnav.jpg" />
+    <Content Include="img\bg_main_withnav_reverse.jpg" />
+    <Content Include="img\bg_main_withoutnav.jpg" />
+    <Content Include="img\bg_mid_menu.gif" />
+    <Content Include="img\content_right.gif" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\flag_germany.gif" />
+    <Content Include="img\flag_italy.gif" />
+    <Content Include="img\flag_sweden.gif" />
+    <Content Include="img\header_top.gif" />
+    <Content Include="img\home_icon.gif" />
+    <Content Include="img\ico\clipboard.ico" />
+    <Content Include="img\ico\folder.ico" />
+    <Content Include="img\ico\Preview-icon.png" />
+    <Content Include="img\ico\print.ico" />
+    <Content Include="img\ico\save.ico" />
+    <Content Include="img\ico\systemmenu.png" />
+    <Content Include="img\image.jpg" />
+    <Content Include="img\inner_h_b1.gif" />
+    <Content Include="img\inner_h_b2.gif" />
+    <Content Include="img\isc-big.jpg" />
+    <Content Include="img\isc.jpg" />
+    <Content Include="img\Log Off.ico" />
+    <Content Include="img\login_bg.gif" />
+    <Content Include="img\myphoto.jpg" />
+    <Content Include="img\nav_end.gif" />
+    <Content Include="img\nav_end2.gif" />
+    <Content Include="img\nav_tab.gif" />
+    <Content Include="img\nav_tab2.gif" />
+    <Content Include="img\nav_tab_hover.gif" />
+    <Content Include="img\nav_tab_visited.gif" />
+    <Content Include="img\tabs.gif" />
+    <Content Include="img\tab_bg.jpg" />
+    <Content Include="img\tab_expan.jpg" />
+    <Content Include="img\tab_L.gif" />
+    <Content Include="img\tab_R.gif" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DwTrans.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Frame.Master.cs">
+      <DependentUpon>Frame.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frame.Master.designer.cs">
+      <DependentUpon>Frame.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_approve_loan.aspx.cs">
+      <DependentUpon>w_sheet_wpt_approve_loan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_approve_loan.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_approve_loan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_calloan.aspx.cs">
+      <DependentUpon>w_sheet_wpt_calloan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_calloan.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_calloan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_changepassword.aspx.cs">
+      <DependentUpon>w_sheet_wpt_changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_changepassword.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_collateral.aspx.cs">
+      <DependentUpon>w_sheet_wpt_collateral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_collateral.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_collateral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_collateral_check.aspx.cs">
+      <DependentUpon>w_sheet_wpt_collateral_check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_collateral_check.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_collateral_check.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_deposit.aspx.cs">
+      <DependentUpon>w_sheet_wpt_deposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_deposit.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_deposit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_divavg.aspx.cs">
+      <DependentUpon>w_sheet_wpt_divavg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_divavg.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_divavg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_forgetpassword.aspx.cs">
+      <DependentUpon>w_sheet_wpt_forgetpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_forgetpassword.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_forgetpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_keeping.aspx.cs">
+      <DependentUpon>w_sheet_wpt_keeping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_keeping.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_keeping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_loan.aspx.cs">
+      <DependentUpon>w_sheet_wpt_loan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_loan.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_loan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_loanpermission.aspx.cs">
+      <DependentUpon>w_sheet_wpt_loanpermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_loanpermission.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_loanpermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_receipt.aspx.cs">
+      <DependentUpon>w_sheet_wpt_receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_receipt.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_register.aspx.cs">
+      <DependentUpon>w_sheet_wpt_register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_register.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_share.aspx.cs">
+      <DependentUpon>w_sheet_wpt_share.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_share.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_share.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_sharebal.aspx.cs">
+      <DependentUpon>w_sheet_wpt_sharebal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_sharebal.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_sharebal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Itm\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="w_sheet_wpt_viewreceive.aspx.cs">
+      <DependentUpon>w_sheet_wpt_viewreceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="w_sheet_wpt_viewreceive.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_viewreceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_viewsharebal.aspx.cs">
+      <DependentUpon>w_sheet_wpt_viewsharebal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItmWeb\w_sheet_wpt_viewsharebal.aspx.designer.cs">
+      <DependentUpon>w_sheet_wpt_viewsharebal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="DwAccess\Sybase.DataWindow.WebService.Runtime.dll" />
+    <Content Include="DwAccess\Sybase.DataWindow.WebService.RuntimeRemoteLoader.dll" />
+    <Content Include="DwAccess\Sybase.DataWindow.WebService.WSDL.dll" />
+    <Content Include="DwAccess\Sybase.DataWindow.WebService.WSDLRemoteLoader.dll" />
+    <Content Include="DwAccess\WptService.dll" />
+    <Content Include="Frame.Master" />
+    <Content Include="img\cat_logo.gif" />
+    <Content Include="img\tphsc.jpg" />
+    <Content Include="ItmWeb\w_sheet_wpt_approve_loan.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_calloan.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_changepassword.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_collateral.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_collateral_check.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_deposit.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_divavg.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_forgetpassword.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_keeping.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_loan.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_loanpermission.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_receipt.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_register.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_share.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_sharebal.aspx" />
+    <None Include="Web References\Itm\CWApprvLoan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWCollWho.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWDept.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWDeptStm.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWDivAvg.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWKeeping.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWLoan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWLoanStm.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWmember.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWRegister.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWShare.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWShareStm.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\CWWhocoll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Itm\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Itm\WptService.disco" />
+    <Content Include="w_sheet_wpt_viewreceive.aspx" />
+    <Content Include="ItmWeb\w_sheet_wpt_viewsharebal.aspx" />
+    <None Include="datawindow.pbl" />
+    <None Include="DwAccess\datawindow.pbl" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Itm\WptService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://wswebportal/GCOOP/WsWebPortal/WptService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Itm\</RelPath>
+      <UpdateFromURL>http://wswebportal/GCOOP/WsWebPortal/WptService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebPortal_Itm_WptService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBAccess\DBAccess.csproj">
+      <Project>{C1DFDA82-6DAB-462B-8A00-38D3BBD5D2CB}</Project>
+      <Name>DBAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3556</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

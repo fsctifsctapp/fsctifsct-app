@@ -1,0 +1,61 @@
+<html><head>
+<META http-equiv="Content-Type" content="text/html; charset=Windows-874">
+<title>n_cst_xmlconfig</title><link rel="stylesheet" type="text/css" href="default.css"></head><body style="margin:4px;"><table class="ObjectHeadTable" cellpadding="2"><tr><td class="ObjectHeadSub">
+				type of
+				User Object
+						within 
+						<a class="ObjectHeadSub" href="xmlconfservice.htm">xmlconfservice.pbl</a></td></tr><tr><td class="ObjectHeadHeading">n_cst_xmlconfig</td></tr></table><div class="ObjectBody">
+XMLConfigService ใช้สำหรับอ่านค่า Configuration ทั้งหมดของโปรแกรมโดยการระบุ ConfigCode
+ConfigCode คือ รหัสสำหรับจับคู่ไฟล์ XML ที่เก็บ Configuration ที่ต้องกำหนดไว้ก่อนแล้วใน XMLConfig.MapConfig
+</div><div class="ObjectBody"><div style="padding-left:-10px;">n_cst_base</div><div style="font:bold; padding-left:0px;"><li class="Hierarchy">n_cst_xmlconfig</li></div></div><div class="ObjectHeader">Usage</div><div class="ObjectBody"><pre>
+ตัวอย่างนี้จะขอ datastore ที่โหลด configuration มาเพื่ออ่านค่าจากบางคอลัมน์
+
+n_cst_xmlconfig lnv_config
+lnv_config = create n_cst_xmlconfig
+lnv_config.of_loadxml( "program.print.config" )
+
+datastore lds_config
+lds_config = lnv_config.of_getdatastore()
+
+integer li_printpreviewflag
+li_printpreviewflag = lds_config.getitemnumber( 1, "printpreview_flag" )
+</pre></div><div class="ObjectHeader">Requirements</div><div class="ObjectBody"><span class="ObjectRef">Library: </span><a href="xmlconfservice.htm">xmlconfservice.pbl</a><br><span class="ObjectRef">References: </span><a href="d_config_codemap.htm">d_config_codemap</a><br><span class="ObjectRef">Referenced: </span>none</div><div class="ObjectHeader">Class Variables</div><div class="ObjectBody"><pre>
+Public:
+constant string XML_CODEMAP = "C:\GCOOP\XMLConfig\xmlconf.codemap.xml"
+constant string XML_PATH = "C:\GCOOP\XMLConfig\"
+
+Protected:
+String is_configcode
+String is_xmlname
+Datastore ids_config
+</pre></div><div class="ObjectHeader">Public Functions</div><table width="100%" cellpadding="0" cellspacing="0"><tr><td class="ObjectBodyTD"><table class="ObjFuncListTable" width="100%"><tr><td class="LibListItem" style="width:180px;"><a class="MainLink" target="Main" href="#of_getdatastore">of_getdatastore</a></td><td class="LibListItem">
+ขอ datastore ที่โหลด configuration ไว้แล้ว (ควรเรียกฟังชั่น of_loadxml ก่อนเสมอ)
+</td></tr><tr><td class="LibListItem" style="width:180px;"><a class="MainLink" target="Main" href="#of_getxml">of_getxml</a></td><td class="LibListItem">
+ขอ XML ที่โหลดจากไฟล์ configuration (ควรเรียกฟังชั่น of_loadxml ก่อนเสมอ)
+</td></tr><tr><td class="LibListItem" style="width:180px;"><a class="MainLink" target="Main" href="#of_getxmlfilenamestring">of_getxmlfilename</a></td><td class="LibListItem">
+อยากรู้ชื่อไฟล์ XML ที่จับคู่กับ ConfigCode
+</td></tr><tr><td class="LibListItem" style="width:180px;"><a class="MainLink" target="Main" href="#of_loadxmlstring">of_loadxml</a></td><td class="LibListItem">
+สั่งให้โหลดข้อมูล XML มาพักไว้ใน Object นี้
+</td></tr></table></td></tr></table><div class="ObjectHeader"><a class="ObjectHeader" name="of_getdatastore">of_getdatastore</a></div><div class="ObjectBody">
+ขอ datastore ที่โหลด configuration ไว้แล้ว (ควรเรียกฟังชั่น of_loadxml ก่อนเสมอ)
+<pre>public function datastore<b> of_getdatastore</b> ()<br>  <br>n_cst_xmlconfig lnv_config lnv_config = create n_cst_xmlconfig lnv_config.of_loadxml( "pbservice.shrlonservice" ) datastore lds_config lds_config = lnv_config.of_getdatastore() ... li_myconfig = lds_config.getitemnumber( 1, "myconfig" )</pre></div><div class="ObjectSubHeader">Return</div><div class="ObjectSubBody">
+ถ้าเสร็จสมบูรณ์ส่งค่ากลับเป็น Datastore ที่มี Configuration โหลดไว้แล้ว
+ถ้าไม่สมบูรณ์ส่งค่ากลับเป็น null
+</div><div class="ObjectHeader"><a class="ObjectHeader" name="of_getxml">of_getxml</a></div><div class="ObjectBody">
+ขอ XML ที่โหลดจากไฟล์ configuration (ควรเรียกฟังชั่น of_loadxml ก่อนเสมอ)
+<pre>public function string<b> of_getxml</b> ()<br>  <br>n_cst_xmlconfig lnv_config lnv_config = create n_cst_xmlconfig lnv_config.of_loadxml( "pbservice.shrlonservice" ) string ls_config ls_config = lnv_config.of_getxml()</pre></div><div class="ObjectSubHeader">Return</div><div class="ObjectSubBody">
+ถ้าเสร็จสมบูรณ์ส่งค่ากลับเป็น DatawindowXML
+ถ้าไม่สมบูรณ์ส่งค่ากลับเป็น null
+</div><div class="ObjectHeader"><a class="ObjectHeader" name="of_getxmlfilenamestring">of_getxmlfilename</a></div><div class="ObjectBody">
+อยากรู้ชื่อไฟล์ XML ที่จับคู่กับ ConfigCode
+<pre>public function string<b> of_getxmlfilename</b> (<br>   string<b> as_configcode </b>value<br>)<br>  <br>n_cst_xmlconfig lnv_config lnv_config = create n_cst_xmlconfig string ls_xmlfile ls_xmlfile = lnv_config.of_getxmlfilename( "pbservice.shrlonservice" )</pre></div><div class="ObjectSubHeader">Parameters</div><div class="ObjectBody"><div class="ObjectBodySubHead">as_configcode:</div><div class="ObjectBodySubBody">	รหัส Configuration ใช้จับคู่ไฟล์ XML
+</div></div><div class="ObjectSubHeader">Return</div><div class="ObjectSubBody">
+ถ้าเสร็จสมบูรณ์ส่งค่ากลับเป็น ชื่อไฟล์ XML
+ถ้าไม่สมบูรณ์ส่งค่ากลับเป็น null
+</div><div class="ObjectHeader"><a class="ObjectHeader" name="of_loadxmlstring">of_loadxml</a></div><div class="ObjectBody">
+สั่งให้โหลดข้อมูล XML มาพักไว้ใน Object นี้
+<pre>public function integer<b> of_loadxml</b> (<br>   string<b> as_configcode </b>value<br>)<br>  <br>n_cst_xmlconfig lnv_config lnv_config = create n_cst_xmlconfig lnv_config.of_loadxml( "pbservice.shrlonservice" ) datastore lds_config lds_config = lnv_config.of_getdatastore() li_myconfig = lds_config.getitemnumber( 1, "myconfig" )</pre></div><div class="ObjectSubHeader">Parameters</div><div class="ObjectBody"><div class="ObjectBodySubHead">as_configcode:</div><div class="ObjectBodySubBody">  รหัส Configuration ใช้จับคู่ไฟล์ XML.
+</div></div><div class="ObjectSubHeader">Return</div><div class="ObjectSubBody">
+1	=	success
+-1	=	error
+</div></body></html>Copyright (C) 1999-2011 Isocare System Co,.Ltd. and its subsidiaries.  All rights reserved.

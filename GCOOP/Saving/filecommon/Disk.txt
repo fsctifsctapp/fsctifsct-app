@@ -1,0 +1,27 @@
+  <?xml version="1.0" encoding="UTF-16LE" standalone="no" ?> 
+- <d_kp_dsksrv_linetext_cutting>
+- <d_kp_dsksrv_linetext_cutting_row>
+  <line_text>00023301427603928475100000000</line_text> 
+  </d_kp_dsksrv_linetext_cutting_row>
+- <d_kp_dsksrv_linetext_cutting_row>
+  <line_text>00041101705702303325100000000</line_text> 
+  </d_kp_dsksrv_linetext_cutting_row>
+- <d_kp_dsksrv_linetext_cutting_row>
+  <line_text>00051801342402500000100000000</line_text> 
+  </d_kp_dsksrv_linetext_cutting_row>
+- <d_kp_dsksrv_linetext_cutting_row>
+  <line_text>00052101309103659650100000000</line_text> 
+  </d_kp_dsksrv_linetext_cutting_row>
+- <d_kp_dsksrv_linetext_cutting_row>
+  <line_text>00069901357706762425100000000</line_text> 
+  </d_kp_dsksrv_linetext_cutting_row>
+- <d_kp_dsksrv_linetext_cutting_row>
+  <line_text>00085101684802946225100000000</line_text> 
+  </d_kp_dsksrv_linetext_cutting_row>
+- <d_kp_dsksrv_linetext_cutting_row>
+  <line_text>00104103161906901250100000000</line_text> 
+  </d_kp_dsksrv_linetext_cutting_row>
+- <d_kp_dsksrv_linetext_cutting_row>
+  <line_text>00108301858802850850100000000</line_text> 
+  </d_kp_dsksrv_linetext_cutting_row>
+  </d_kp_dsksrv_linetext_cutting>
