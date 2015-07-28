@@ -194,14 +194,14 @@ namespace Saving.Applications.walfare
                 if (SQLcon == "")
                 {
                     //SQLcon = "%";
-                    if (state.SsCsType == "1")
+                    if (state.SsCsType == "1" || state.SsCsType == "8")
                     SQLcon = "and cmucfcoopbranch.cs_type = '" + state.SsCsType + "'";
                     else
                     SQLcon = "%";
                 }
                 else
                 {
-                    if (state.SsCsType == "1")
+                    if (state.SsCsType == "1" || state.SsCsType == "8")
                     SQLcon = SQLcon + "and cmucfcoopbranch.cs_type = '" + state.SsCsType + "'";
 
                     String SQL = SQLBegin + SQLcon;
