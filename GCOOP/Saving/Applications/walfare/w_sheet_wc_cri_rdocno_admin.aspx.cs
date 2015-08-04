@@ -207,9 +207,12 @@ namespace Saving.Applications.walfare
             String coop_name = state.SsCoopName;
            // String start_date = WebUtil.ConvertDateThaiToEng(dw_criteria, "as_tstartdate", null);
            // String end_date = WebUtil.ConvertDateThaiToEng(dw_criteria, "as_tenddate", null);
-            String start_date = dw_criteria.GetItemString(1, "as_startdate");
-            String end_date = dw_criteria.GetItemString(1, "as_enddate");
             string branch_allr = dw_criteria.GetItemDecimal(1, "branch_all").ToString();
+            String start_date = dw_criteria.GetItemString(1, "as_startdate");
+            String end_date = String.Empty;
+            if(branch_allr != "12")
+            end_date = dw_criteria.GetItemString(1, "as_enddate");
+            
             String as_logotus = dw_criteria.GetItemDecimal(1, "as_logotus").ToString();
             ReportHelper lnv_helper = new ReportHelper();
             if (branch_allr == "5" || branch_allr == "9" || branch_allr == "10" || branch_allr == "11")
