@@ -1373,9 +1373,7 @@ namespace GcoopServiceCs
 
                 }
 
-                String sql_full = "select * from wcreqdeposit where member_no = '" + member_no + "' and prename_code = '" + prename_code + @"' and deptaccount_name = '"
-                   + deptaccount_name + "' and deptaccount_sname = '" + deptaccount_sname + "' and card_person = '" + card_person + "' and branch_id = '" + branch_id + @"'
-                    and approve_status > 0";
+                String sql_full = "select * from wcreqdeposit where trim(card_person) = '" + card_person + "' and approve_status > 0";
 
                 Sdt dtchk_full = ta.Query(sql_full);
                 if (dtchk_full.Next())
@@ -1383,7 +1381,7 @@ namespace GcoopServiceCs
                     if (dtchk_full.GetDecimal("approve_status") == 8)
                     {
                         ta.Close();
-                        throw new Exception("ไม่สามารถทำรายการได้ เลขสมาชิกสหกรณ์ " + member_no + " " + deptaccount_name + "   " + deptaccount_sname + " บัตรประชาชน " + card_person + " มีอยู่แล้ว กรุณาตรวจสอบ");
+                        throw new Exception("ไม่สามารถทำรายการได้ ชื่อ "  + deptaccount_name + "   " + deptaccount_sname + " บัตรประชาชน " + card_person + " มีใบสมัคร ที่รอการอนุมัติอยู่ กรุณาตรวจสอบ");
                     }
                     string resuCode = checkDupMaster(dtchk_full.GetString("deptaccount_no"));
                     if (checkDupMaster(dtchk_full.GetString("deptaccount_no")) != "")
