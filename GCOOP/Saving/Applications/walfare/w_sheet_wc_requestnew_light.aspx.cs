@@ -189,6 +189,13 @@ namespace Saving.Applications.walfare
                 LtServerMessage.Text = WebUtil.ErrorMessage("กรุณาระบุคำนำหน้า");
                 return;
             }
+            string sex = Convert.ToString(dtMain.Rows[0]["sex"]);
+            if (sex.Trim() == "")
+            {
+                LtServerMessage.Text = WebUtil.ErrorMessage("กรุณาระบุเพศ");
+                return;
+            }
+
             //return;
             string member_no = Convert.ToString(dtMain.Rows[0]["member_no"] );
             for (int i = dtOther.Rows.Count; i > 0; i--)
