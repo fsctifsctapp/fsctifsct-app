@@ -87,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Applications\walfare\w_sheet_wc_newmb_slipprint.aspx" />
     <Content Include="Applications\walfare\w_sheet_wc_wc_fee_slipprint.aspx" />
     <Content Include="Applications\walfare\w_sheet_wc_cri_total_age.aspx" />
     <Content Include="Applications\walfare\w_sheet_wc_edit_deptacc.aspx" />
@@ -199,6 +200,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\walfare\w_sheet_wc_newmb_slipprint.aspx.cs">
+      <DependentUpon>w_sheet_wc_newmb_slipprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\walfare\w_sheet_wc_newmb_slipprint.aspx.designer.cs">
+      <DependentUpon>w_sheet_wc_newmb_slipprint.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Applications\walfare\w_sheet_wc_wc_fee_slipprint.aspx.cs">
       <DependentUpon>w_sheet_wc_wc_fee_slipprint.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
