@@ -59,7 +59,7 @@ namespace Saving.Applications.walfare
             int period = 0;
             try
             {
-                if (state.SsCsType == "8")
+                if (state.SsCsType == "8" || state.SsCsType == "4" || state.SsCsType == "5")
                 {
                     Dperiod = DWCtrl.GetItemDecimal(1, "period");
                     period = Convert.ToInt32(Dperiod);

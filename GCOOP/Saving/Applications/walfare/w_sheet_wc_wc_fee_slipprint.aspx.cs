@@ -107,7 +107,7 @@ namespace Saving.Applications.walfare
 
                 String SQLcon = "", deptaccount_name, deptaccount_sname, card_person, deptopen_tdate;
                 String st_tdate, end_tdate, deptacc_st, deptacc_end, member_nos, member_noe;
-                String st_DateEN, end_DateEN, deptopen_ENdate;
+                String st_DateEN, end_DateEN, deptopen_ENdate, perio;
                 //DateTime deptopen_date;
 
 
@@ -168,8 +168,12 @@ namespace Saving.Applications.walfare
                     member_nos = "";
                     member_noe = "";
                 }
-  
- 
+
+                perio = DWCtrl.GetItemString(1, "perio");
+                if (perio.Trim() != "ALL")
+                {
+                    SQLcon = SQLcon + " and trim(WCDEPTSLIP.RECV_PERIOD) = '" + perio.Trim() + "' ";
+                }
                 if (deptaccount_name != "")
                 {
                     SQLcon = SQLcon + " and wcdeptmaster.deptaccount_name like '%" + deptaccount_name.Trim() + "%'";

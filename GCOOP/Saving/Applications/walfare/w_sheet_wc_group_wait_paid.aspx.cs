@@ -60,7 +60,7 @@ namespace Saving.Applications.walfare
             decimal fee = 20;  
             try
             {
-                if (state.SsCsType == "8")
+                if (state.SsCsType == "8" || state.SsCsType == "4" || state.SsCsType == "5")
                 {
                      Dperiod = DWCtrl.GetItemDecimal(1, "period");
                      period = Convert.ToInt32(Dperiod);
@@ -152,6 +152,21 @@ namespace Saving.Applications.walfare
                                 case "8":
                                     fee = 20;
                                     break;
+                            }
+                            statement_flag = 0;
+                            break;
+
+                        case 255808:
+                            switch (state.SsCsType)
+                            {
+                               
+                                case "4":
+                                    fee = 0;
+                                    break;
+                                case "5":
+                                    fee = 0;
+                                    break;
+                             
                             }
                             statement_flag = 0;
                             break;

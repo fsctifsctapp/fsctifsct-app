@@ -2088,18 +2088,22 @@ namespace GcoopServiceCs
                 string[] deptitemtype_desc = new string[] { "เงินสงเคราะห์ศพล่วงหน้า", "ค่าธรรมเนียมรายปี" };
                 prncslip_amt[1] = fee;
                 decimal principal = 0;
+                string period_mm = (period.ToString()).Substring(4,2);
                 for (int i = 0; i < dwMain.RowCount; i++)
                 {
                     deptaccount_no = dwMain.GetItemString(i + 1, "wfmember_no");
-                    if (dwMain.GetItemDecimal(i + 1, "status") == 1)
+                    if (period_mm == "12")
                     {
-                        sqlChkWcreceive = "select * from wcrecievemonth where wfmember_no = '" + deptaccount_no + "' and recv_period = " + period + " and status_post <> 1 and wcitemtype_code = 'FEE'";
-                        dtChkWcreceive = ta.Query(sqlChkWcreceive);
-                        if (!dtChkWcreceive.Next())
+
+                        if (dwMain.GetItemDecimal(i + 1, "status") == 1)
                         {
-                            throw new Exception("เลขฌาปนกิจ " + deptaccount_no + " ได้ทำรายการไปแล้ว ไม่สามารถทำรายการได้อีก");
-                        }
-                       
+                            sqlChkWcreceive = "select * from wcrecievemonth where wfmember_no = '" + deptaccount_no + "' and recv_period = " + period + " and status_post <> 1 and wcitemtype_code = 'FEE'";
+                            dtChkWcreceive = ta.Query(sqlChkWcreceive);
+                            if (!dtChkWcreceive.Next())
+                            {
+                                throw new Exception("เลขฌาปนกิจ " + deptaccount_no + " ได้ทำรายการไปแล้ว ไม่สามารถทำรายการได้อีก");
+                            }
+
                             sqlSeqStm = "select max(seq_no) as sss from wcdeptstatement where deptaccount_no='" + deptaccount_no + "' and branch_id='" + branch_id + "'";
                             dt = ta.Query(sqlSeqStm);
                             if (dt.Next())
@@ -2123,26 +2127,27 @@ namespace GcoopServiceCs
                             }
                             principal += prncslip_amt[0];
 
-                        string period_year = (period.ToString()).Substring(0, 4);
-                        period_year = (Convert.ToInt32(period_year) - 542).ToString();
-                        String SQLMaster = @"update wcdeptmaster set effective_date = to_date('01/01/" + period_year + @"', 'dd/mm/yyyy')";
+                            string period_year = (period.ToString()).Substring(0, 4);
+                            period_year = (Convert.ToInt32(period_year) - 542).ToString();
+                            String SQLMaster = @"update wcdeptmaster set effective_date = to_date('01/01/" + period_year + @"', 'dd/mm/yyyy')";
 
-                        sqlSeqStm = "select max(seq_no) as sss from wcdeptstatement where deptaccount_no='" + deptaccount_no + "' and branch_id='" + branch_id + "'";
-                        dt = ta.Query(sqlSeqStm);
-                        if (dt.Next())
-                        {
-                            if (statement_flag == 1)
+                            sqlSeqStm = "select max(seq_no) as sss from wcdeptstatement where deptaccount_no='" + deptaccount_no + "' and branch_id='" + branch_id + "'";
+                            dt = ta.Query(sqlSeqStm);
+                            if (dt.Next())
                             {
-                                seq_stm = dt.GetInt32(0);
-                                SQLMaster = SQLMaster + ", prncbal=" + principal + ", laststmseq_no = " + seq_stm;
+                                if (statement_flag == 1)
+                                {
+                                    seq_stm = dt.GetInt32(0);
+                                    SQLMaster = SQLMaster + ", prncbal=" + principal + ", laststmseq_no = " + seq_stm;
+                                }
+                                //ta.Exe("update wcdeptmaster set prncbal=" + principal + " where deptaccount_no='" + deptaccount_no + "' and branch_id='" + branch_id + "'");
+                                //ta.Exe("update wcrecievemonth set status_post = " + dwMain.GetItemDecimal(i + 1, "status") + " where wfmember_no ='" + deptaccount_no + "' and wcitemtype_code = 'FEE' and recv_period = " + period);
                             }
-                            //ta.Exe("update wcdeptmaster set prncbal=" + principal + " where deptaccount_no='" + deptaccount_no + "' and branch_id='" + branch_id + "'");
-                            //ta.Exe("update wcrecievemonth set status_post = " + dwMain.GetItemDecimal(i + 1, "status") + " where wfmember_no ='" + deptaccount_no + "' and wcitemtype_code = 'FEE' and recv_period = " + period);
-                        }
-                        SQLMaster = SQLMaster + " where deptaccount_no='" + deptaccount_no +
-                                "' and branch_id='" + branch_id + "'";
+                            SQLMaster = SQLMaster + " where deptaccount_no='" + deptaccount_no +
+                                    "' and branch_id='" + branch_id + "'";
 
-                        ta.Exe(SQLMaster);
+                            ta.Exe(SQLMaster);
+                        }
                     }
                     ta.Exe("update wcrecievemonth set status_post = " + dwMain.GetItemDecimal(i + 1, "status") + " where wfmember_no ='" + deptaccount_no + "' and wcitemtype_code = 'FEE' and recv_period = " + period);
                 }
