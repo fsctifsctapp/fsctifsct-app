@@ -145,8 +145,8 @@ namespace Saving.Applications.walfare
                 String Branch_id = DwMain.GetItemString(1, "branch_id");
                 DwUtil.RetrieveDataWindow(DwMain, pbl, tDwMain, AccNo, Branch_id);
 
-                string Syear = Convert.ToString(DateTime.Today.Year + 543);
-                DwMain.SetItemString(1, "for_year", Syear);
+                //string Syear = Convert.ToString(DateTime.Today.Year + 543);
+                //DwMain.SetItemString(1, "for_year", Syear);
 
                 if (DwMain.RowCount < 1) {
                     LtServerMessage.Text = WebUtil.ErrorMessage("ไม่พบข้อมูล");
