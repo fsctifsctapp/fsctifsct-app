@@ -148,9 +148,16 @@ namespace Saving.Applications.walfare
                 //string Syear = Convert.ToString(DateTime.Today.Year + 543);
                 //DwMain.SetItemString(1, "for_year", Syear);
 
-                if (DwMain.RowCount < 1) {
+                if (DwMain.RowCount < 1)
+                {
                     LtServerMessage.Text = WebUtil.ErrorMessage("ไม่พบข้อมูล");
                     DwMain.InsertRow(0);
+                    DwMain.SetItemString(1, "branch_id", state.SsBranchId);
+                }
+                else
+                {
+                    string Syear = Convert.ToString(DateTime.Today.Year + 543);
+                    DwMain.SetItemString(1, "for_year", Syear);
                 }
 
             }
