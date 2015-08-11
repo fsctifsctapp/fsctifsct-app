@@ -3928,12 +3928,12 @@ namespace GcoopServiceCs
                     if (resigncause_code.Trim() == "04" && reqchg_status == -9)
                     {
                         String SQL4 = "SELECT * FROM wcrecievemonth WHERE recv_period = '" + period
-                            + "' AND wfmember_no = '" + deptaccount_no + "' and branch_id = '" + branch_id + "'";
+                            + "' AND wfmember_no = '" + deptaccount_no + "' and branch_id = '" + branch_id + "' and wcitemtype_code = 'FEE' ";
                         Sdt dt = ta.Query(SQL4);
                         if (dt.Next())
                         {
                             String SQL3 = "UPDATE wcrecievemonth SET status_post = 8 WHERE recv_period = '" + period
-                                + "' AND wfmember_no = '" + deptaccount_no + "' and branch_id = '" + branch_id + "'";
+                                + "' AND wfmember_no = '" + deptaccount_no + "' and branch_id = '" + branch_id + "' and wcitemtype_code = 'FEE' ";
                             ta.Exe(SQL3);
                         }
                         else
