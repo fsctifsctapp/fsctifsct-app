@@ -374,8 +374,8 @@ namespace Saving.Applications.walfare
                     count++;
                     slip_no = DwMain.GetItemString(i, "wcdeptslipdet_deptslip_no");
 
-                    String sqlinsertdet = @"insert into wcsliptemp(deptslip_no, entry_id, branch_id, cs_type)
-                    values('" + slip_no + "','" + entry_id + "', '" + branch_id + "', '" + Cs_type + "')";
+                    String sqlinsertdet = @"insert into wcsliptemp(deptslip_no, entry_id, branch_id, cs_type, seq_no )
+                    values('" + slip_no + "','" + entry_id + "', '" + branch_id + "', '" + Cs_type + "', '" + i + "')";
 
                     WebUtil.QuerySdt(sqlinsertdet);
                 } 
