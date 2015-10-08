@@ -1,1 +1,0 @@
-﻿Data Source=192.168.1.52/gcoop;Persist Security Info=True;User ID=scobkcat;Password=scobkcat;

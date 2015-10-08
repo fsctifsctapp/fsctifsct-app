@@ -1,2 +1,0 @@
-n_cst_doccontrolservice|n_cst_doccontrolservice||of_getnewdocno:SS|of_getnewdocno||of_settrans:QCn_cst_dbconnectservice_web.|of_settrans|
-n_cst_dbconnectservice_web|n_cst_dbconnectservice_web||of_connectdb:I|of_connectdb||of_disconnectdb:I|of_disconnectdb||of_connectdb:IS|of_connectdb|

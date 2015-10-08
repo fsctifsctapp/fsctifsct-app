@@ -1,5 +1,0 @@
-Save Format v3.0(19990112)
-appname "Default";
-applib "walfare.pbl";
-LibList "w_sheet_duplicate.pbl;w_sheet_wc_export_excel.pbl;w_sheet_wc_inform.pbl;w_sheet_wc_membermaster.pbl;w_sheet_wc_permission_all.pbl;w_sheet_wc_trn_memb.pbl;w_sheet_wc_walfare_new.pbl;w_sheet_wc_walfare_paid.pbl;w_sheet_wc_walfare_reqedit.pbl;w_sheet_wc_walfare_slip.pbl";
-type "DataWindow Designer";

@@ -1,9 +1,0 @@
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\bin\Debug\WinServerClond.exe
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\bin\Debug\WinServerClond.pdb
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\obj\x86\Debug\WinServerClound.Form1.resources
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\obj\x86\Debug\WinServerClond.Properties.Resources.resources
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\obj\x86\Debug\ResGen.read.1.tlog
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\obj\x86\Debug\ResGen.write.1.tlog
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\obj\x86\Debug\WinServerClond.exe
-C:\GCOOP_ALL\CAT\GCOOP\WinServerClound\obj\x86\Debug\WinServerClond.pdb

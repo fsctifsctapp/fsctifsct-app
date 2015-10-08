@@ -1,2 +1,0 @@
-n_cst_dbconnectservice|n_cst_dbconnectservice||of_disconnectdb:I|of_disconnectdb||of_connectdb:IS|of_connectdb|
-n_cst_finance_service|n_cst_finance_service||of_open_day:IS|of_open_day||of_init_openday:ISSWSRS|of_init_openday||of_init_fincashcontrol:ISSRS|of_init_fincashcontrol||of_settrans:ICn_cst_dbconnectservice.|of_settrans|
